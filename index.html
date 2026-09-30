@@ -1585,7 +1585,7 @@ const B=[
  days:['6.11']},
 {n:'Лида',c:'Гродненская обл.',ll:[53.8910,25.3020],dt:'7–8 ноя',ni:1,w:'+4° / −1°',wn:'пасмурно, возможны заморозки',lab:'r',
  h:{n:'Квартира в Лиде',u:'https://sutochno.ru/front/searchapp/detail/1533242?id=1&guests_adults=2&occupied=2026-11-07%3B2026-11-08',w:'Лида · адрес — в брони',ci:'≈ 18:30',co:'до 8:30 — уточнить',p:'уточнить у хозяина',pr:'≈120 BYN (3 346 ₽)'},
- days:['7.11','8.11']}];
+ days:['7.11']}];
 // ─── ПЕРЕГОНЫ (j = база прибытия; 4 = финиш в Минске)
 const LEGS=[
 {f:'Минск',t:'Берёза',d:'4.11',time:'≈4 ч',via:'Мир · Несвиж · М1'},
@@ -1597,9 +1597,9 @@ const LEGS=[
 const P0=[
 ['Вокзал Минск-Пассажирский',53.89056,27.55118,'trn','4.11','прибытие 06:40','машину Alfarent подаёт сюда в 8:00',0,'en'],
 ['Мирский замок',53.4512,26.47328,'cas','4.11','1 ч 30 · 100 км от Минска','замок XVI века, ЮНЕСКО',0,'en','https://mirzamak.by/'],
-['Костёл Святого Николая, Мир',53.45272,26.46538,'chu','4.11','пешком · 5 мин от замка','на Мирской площади',0,'en'],
+['Костёл Святого Николая',53.45272,26.46538,'chu','4.11','пешком · 5 мин от замка','на Мирской площади',0,'en'],
 ['Несвижский замок',53.22279,26.69181,'cas','4.11','30 мин · 35 км от Мира','дворец Радзивиллов, ЮНЕСКО',0,'en','https://niasvizh.by/'],
-['Фарный костёл, Несвиж',53.22062,26.68378,'chu','4.11','пешком · 10 мин от дворца','усыпальница Радзивиллов',0,'en'],
+['Фарный костёл Божьего Тела',53.22062,26.68378,'chu','4.11','пешком · 10 мин от дворца','усыпальница Радзивиллов',0,'en'],
 ['Несвижская ратуша',53.21906,26.68123,'lmk','4.11','пешком','по желанию, 8 BYN',0,'en'],
 ['Слуцкая брама',53.218,26.68552,'lmk','4.11','пешком','ворота старого Несвижа',0,'en'],
 ['Картезианский монастырь',52.5292,24.9612,'chu','5.11','5 мин · 2 км от базы','руины XVII века, снаружи',0,'pl'],
@@ -1620,11 +1620,11 @@ const P0=[
 ['Музей природы',52.5620,23.8095,'lmk','6.11','пешком от касс','диорамы пущи, 9:00–18:00',2,'en'],
 ['Вольеры с зубрами',52.5645,23.8063,'brd','6.11','пешком от касс','зубры, олени, кабаны; до 20:00',2,'en'],
 ['Экотропа «Докудово»',52.5700,23.7780,'tre','6.11','от касс','3 км, смотровые вышки',2,'en'],
-['Старый замок, Гродно',53.6773,23.82299,'cas','7.11','пешком · 1 км от базы','замок Витовта и Батория, 12 BYN',2,'pl','https://grodno-museum.by/'],
-['Новый замок, Гродно',53.6763,23.82455,'cas','7.11','пешком','королевский дворец XVIII века, 10 BYN',2,'pl'],
+['Старый замок',53.6773,23.82299,'cas','7.11','пешком · 1 км от базы','замок Витовта и Батория, 12 BYN',2,'pl','https://grodno-museum.by/'],
+['Новый замок',53.6763,23.82455,'cas','7.11','пешком','королевский дворец XVIII века, 10 BYN',2,'pl'],
 ['Коложская церковь',53.67843,23.81863,'chu','7.11','пешком · 10 мин от замков','XII век, над Неманом',2,'pl'],
-['Фарный костёл, Гродно',53.67832,23.83158,'chu','7.11','пешком','барокко, огромный резной алтарь',2,'pl'],
-['Советская площадь, Гродно',53.67739,23.82937,'lmk','7.11','пешком','и улица Советская',2,'pl'],
+['Фарный костёл Святого Франциска Ксаверия',53.67832,23.83158,'chu','7.11','пешком','барокко, огромный резной алтарь',2,'pl'],
+['Советская площадь',53.67739,23.82937,'lmk','7.11','пешком','и улица Советская',2,'pl'],
 ['Меловые карьеры',53.2760,24.4210,'wav','7.11','1 ч · 75 км от Гродно','бирюзовые озёра в мелу, вход свободный',3,'en'],
 ['Лидский замок',53.88716,25.30348,'cas','8.11','пешком от базы','XIV век, 10:00–19:00, 15 BYN',3,'pl'],
 ['Костёл Воздвижения Святого Креста',53.8893,25.2997,'chu','8.11','пешком от замка','барокко XVIII века',3,'pl'],
@@ -1640,9 +1640,9 @@ const PN={};PL.forEach(p=>PN[p.n]=p);
 const DESC={
 'Вокзал Минск-Пассажирский':['Главный вокзал Минска на Привокзальной площади, напротив — «Ворота Минска», две башни 1950-х.','На башне с часами — самые большие часы в Беларуси, их циферблат виден через всю площадь.'],
 'Мирский замок':['Замок начали строить в начале XVI века Ильиничи, достраивали Радзивиллы. Сейчас — музей: жилые покои, башни с крутыми ступенями, подвалы. Двор, пруд и парк открыты свободно.','С 2000 года — объект Всемирного наследия ЮНЕСКО.'],
-'Костёл Святого Николая, Мир':['Костёл начала XVII века на Мирской площади, построенный Радзивиллами. Рядом — торговая площадь местечка и старые дома.',''],
+'Костёл Святого Николая':['Костёл начала XVII века на Мирской площади, построенный Радзивиллами. Рядом — торговая площадь местечка и старые дома.',''],
 'Несвижский замок':['Главная резиденция Радзивиллов с XVI века: дворец с отреставрированными залами, двор, валы и пять парков вокруг прудов.','По легенде, во дворце бродит Чёрная дама — дух Барбары Радзивилл.'],
-'Фарный костёл, Несвиж':['Костёл Божьего Тела 1587–1593 годов — одна из первых барочных построек Восточной Европы. В крипте — саркофаги Радзивиллов.',''],
+'Фарный костёл Божьего Тела':['Костёл Божьего Тела 1587–1593 годов — одна из первых барочных построек Восточной Европы. В крипте — саркофаги Радзивиллов.',''],
 'Несвижская ратуша':['Одна из старейших сохранившихся ратуш Беларуси, конец XVI века, с торговыми рядами.',''],
 'Слуцкая брама':['Единственные уцелевшие ворота городских укреплений Несвижа, XVII–XVIII век.',''],
 'Картезианский монастырь':['Руины монастыря картезианцев, основанного в 1648 году Казимиром Львом Сапегой, — единственного монастыря этого ордена в Великом княжестве Литовском.',''],
@@ -1663,11 +1663,11 @@ const DESC={
 'Музей природы':['Экспозиция о пуще: диорамы с животными, история заповедника. В предпраздничный день может закрыться раньше 18:00.',''],
 'Вольеры с зубрами':['Большие вольеры с зубрами, оленями, кабанами, лосями. Комплексный билет с музеем ≈20 BYN.','Зубр — самое крупное наземное животное Европы и символ пущи.'],
 'Экотропа «Докудово»':['Тропа около 3 км со смотровыми вышками. К вечеру на поляны выходят звери — возьмите бинокль.',''],
-'Старый замок, Гродно':['Замок над Неманом, основанный при Витовте. При Стефане Батории перестроен в ренессансную резиденцию.','Король Стефан Баторий умер здесь в 1586 году.'],
-'Новый замок, Гродно':['Королевский дворец XVIII века напротив Старого замка, здесь проходили сеймы Речи Посполитой.','В 1795 году в этом дворце отрёкся от престола последний король Станислав Август.'],
+'Старый замок':['Замок над Неманом, основанный при Витовте. При Стефане Батории перестроен в ренессансную резиденцию.','Король Стефан Баторий умер здесь в 1586 году.'],
+'Новый замок':['Королевский дворец XVIII века напротив Старого замка, здесь проходили сеймы Речи Посполитой.','В 1795 году в этом дворце отрёкся от престола последний король Станислав Август.'],
 'Коложская церковь':['Борисоглебская церковь XII века — один из древнейших храмов Беларуси, на высоком берегу Немана.','В 1853 году часть стены обрушилась в реку; её заменили деревянной.'],
-'Фарный костёл, Гродно':['Иезуитский собор святого Франциска Ксаверия, барокко XVII–XVIII веков, с огромным резным алтарём.',''],
-'Советская площадь, Гродно':['Главная площадь Гродно, от неё начинается пешеходная Советская улица. 7 ноября возможны мероприятия и перекрытия.',''],
+'Фарный костёл Святого Франциска Ксаверия':['Иезуитский собор святого Франциска Ксаверия, барокко XVII–XVIII веков, с огромным резным алтарём.',''],
+'Советская площадь':['Главная площадь Гродно, от неё начинается пешеходная Советская улица. 7 ноября возможны мероприятия и перекрытия.',''],
 'Меловые карьеры':['Бывшие выработки мела у Красносельского: бирюзовые озёра среди белых склонов. Смотреть с верхних площадок — склоны крутые и скользкие.',''],
 'Лидский замок':['Кирпичный замок XIV века времён Гедимина. Экспозиции в башнях пускают партиями — приходите к открытию.',''],
 'Костёл Воздвижения Святого Креста':['Барочный костёл XVIII века в центре Лиды, в нескольких минутах от замка.',''],
@@ -1682,27 +1682,26 @@ const DESC={
 const WD={'4.11':'ср','5.11':'чт','6.11':'пт','7.11':'сб','8.11':'вс'};
 const DT={'4.11':'Мир и Несвиж','5.11':'Коссово и Брест','6.11':'Пуща','7.11':'Гродно','8.11':'Свитязь и Минск'};
 const DAYPLAN={
-'4.11':{b:0,s:['@M','Мирский замок','~Костёл Святого Николая, Мир','Несвижский замок','~Фарный костёл, Несвиж','~Несвижская ратуша','~Слуцкая брама','@0']},
+'4.11':{b:0,s:['@M','Мирский замок','~Костёл Святого Николая','Несвижский замок','~Фарный костёл Божьего Тела','~Несвижская ратуша','~Слуцкая брама','@0']},
 '5.11':{b:1,s:['@0','Картезианский монастырь','~Красные казармы','Дворец Пусловских','~Усадьба Костюшко','~Ресторан «Граф Пусловский»','@1','Музей обороны Брестской крепости','~Музей «Берестье»','~Мемориал «Мужество»','~Холмские ворота','~Тереспольские ворота','~Руины Белого дворца','~Аллея фонарей']},
 '6.11':{b:2,s:['@1','Каменецкая вежа','Кассы в Каменюках','~Экотропа «Озёрное кольцо»','~Музей природы','~Вольеры с зубрами','~Экотропа «Докудово»','@2']},
-'7.11':{b:3,s:['@2','~Старый замок, Гродно','~Новый замок, Гродно','~Коложская церковь','~Фарный костёл, Гродно','~Советская площадь, Гродно','Меловые карьеры','@3']},
+'7.11':{b:3,s:['@2','~Старый замок','~Новый замок','~Коложская церковь','~Фарный костёл Святого Франциска Ксаверия','~Советская площадь','Меловые карьеры','@3']},
 '8.11':{b:3,s:['@3','~Лидский замок','~Костёл Воздвижения Святого Креста','Озеро Свитязь','Вокзал: сдача машины','~Красный костёл','~Верхний город','~Троицкое предместье','~Остров слёз','~Национальная библиотека']}};
 const DAYS={
-'4.11':{r:[['06:40','Прибытие на Минск-Пассажирский, завтрак у вокзала'],['08:00','Alfarent подаёт машину к вокзалу, оформление 15–30 минут'],['08:20','Минск → Мир · 1 ч 30 мин · 100 км',1],['09:50','До открытия в 10:00 — двор, пруд и парк, вход свободный'],['10:00','Мирский замок: экспозиция, башни и подвал'],['12:00','Мирская площадь, Костёл Святого Николая'],['12:30','Обед при замке'],['13:30','Мир → Несвиж · 30 мин · 35 км',1],['14:00','Несвижский замок, дворец Радзивиллов'],['15:30','Парки, Фарный костёл, ратуша по желанию, Слуцкая брама — до заката'],['17:30','Несвиж → Берёза по М1 · 2 ч · 170 км, в темноте',1],['19:45','Заселение, ужин']],
- pre:['Бронь в Бресте: одна ночь 5–6.11 — уточните цену.','Гродно 6–7.11: забронируйте квартиру на Социалистической, 40, спросите про парковку и заселение около 21:45.','Alfarent: подача 4.11 в 8:00 к вокзалу, возврат 8.11 около 16:00, лимит 250 км/сутки за весь срок, зимняя или всесезонная резина.','Скачайте офлайн-карты в Яндекс Навигаторе: под Коссово и в пуще связь слабая.','Держите 200–300 BYN наличными: российские Visa и Mastercard не работают, «Мир» — почти везде.'],
+'4.11':{r:[['06:40','Прибытие на Минск-Пассажирский, завтрак у вокзала'],['08:00','Alfarent подаёт машину к вокзалу, оформление 15–30 минут'],['08:20','Минск → Мир · 1 ч 30 мин · 100 км',1],['09:50','До открытия в 10:00 — двор, пруд и парк, вход свободный'],['10:00','Мирский замок: экспозиция, башни и подвал'],['12:00','Мирская площадь, Костёл Святого Николая'],['12:30','Обед при замке'],['13:30','Мир → Несвиж · 30 мин · 35 км',1],['14:00','Несвижский замок, дворец Радзивиллов'],['15:30','Парки, Фарный костёл Божьего Тела, ратуша по желанию, Слуцкая брама — до заката'],['17:30','Несвиж → Берёза по М1 · 2 ч · 170 км, в темноте',1],['19:45','Заселение, ужин']],
+ pre:[],
  cp:[['Напишите в Alfarent:','Здравствуйте! У нас бронь Volkswagen up! на 4–8 ноября. Подтвердите, пожалуйста: подача к вокзалу Минск-Пассажирский 4.11 в 8:00, возврат там же 8.11 около 16:00. Лимит 250 км в сутки считается за весь срок? И можно ли зимнюю или всесезонную резину? Спасибо!']],
- am:['Осмотр машины: снимите кузов и салон на видео, проверьте бак, запаску, техпаспорт, полис и договор. Сохраните номер круглосуточной поддержки.'],
- n:'Днём — ближний свет или ДХО. 60 км/ч в городах, 90 вне, до 120 на магистралях, камер много. Водителю — ни капли. Мир: в башнях крутые ступени, аудиогид 6 BYN по документу. Несвиж: если опаздываете — сокращайте парк, а не дворец. Перед М1 в баке не меньше четверти.',
- tm:['Коссово: дворец открыт 9:30–18:00 — в четверг работает.']},
+ am:['Снять 200–300 BYN наличными — в банкомате на вокзале Минск-Пассажирский, картой «Мир» (проверьте комиссию своего банка). Российские Visa и Mastercard не работают.','Скачайте офлайн-карты в Яндекс Навигаторе: под Коссово и в пуще связь слабая.','Осмотр машины: снимите кузов и салон на видео, проверьте бак, запаску, техпаспорт, полис и договор. Сохраните номер круглосуточной поддержки.'],
+ n:'Днём — ближний свет или ДХО. 60 км/ч в городах, 90 вне, до 120 на магистралях, камер много. Водителю — ни капли. Мир: в башнях крутые ступени, аудиогид 6 BYN по документу. Несвиж: если опаздываете — сокращайте парк, а не дворец. Перед М1 в баке не меньше четверти.'},
 '5.11':{r:[['07:30','Завтрак'],['08:15','Картезианский монастырь и Красные казармы — снаружи, при утреннем свете'],['08:50','Берёза → Коссово · 40 мин · 35 км',1],['09:30','Дворец Пусловских и Усадьба Костюшко'],['11:45','Обед в ресторане «Граф Пусловский»'],['12:45','Коссово → Брест · 2 ч · 150 км',1],['15:00','Заселение'],['15:15','Музей обороны Брестской крепости'],['16:30','Музей «Берестье» — по желанию'],['17:15','Мемориал «Мужество», Холмские ворота, Тереспольские ворота, Руины Белого дворца — на закате и в подсветке'],['19:00','Аллея фонарей на Советской, ужин']],
  n:'Сначала музей — касса до 17:30, потом территория: вход бесплатный, открыто до 24:00. Коссово: фотосъёмка внутри может быть платной. В центре Бреста платные парковки — SMS или приложение.',
  tm:['Уточните, во сколько 6.11 открывается Каменецкая вежа — от этого зависит утренний заезд.','Заправьтесь вечером: завтра 250 км, из них последние 220 — в темноте.','Непромокаемая обувь и бинокль — на экотропы.']},
 '6.11':{r:[['07:30','Завтрак, выписка'],['08:00','Брест → Каменец · 40 мин · 40 км',1],['08:40','Каменецкая вежа — если открыта с утра'],['09:20','Каменец → Каменюки · 20 мин · 20 км',1],['09:45','Билеты в кассах у главного входа'],['10:00','Экотропа «Озёрное кольцо», 6 км. Вариант — автобус в 11:00, 30 BYN, при группе от 6 человек'],['12:00','Обед: кафе «Лясны кут» или ресторан «Беловежская пуща»'],['13:00','Музей природы — днём, на случай сокращённого дня'],['14:00','Вольеры с зубрами'],['15:15','Экотропа «Докудово», 3 км, смотровые вышки. Закат около 17:40'],['17:20','Ужин в Каменюках'],['18:30','Каменюки → Гродно · 3 ч · 220 км',1],['21:45','Заселение в Гродно']],
  n:'В заповедную часть на своей машине не пустят — тропы начинаются от касс. Предпраздничный день: музей может закрыться раньше. Первые десятки километров до Гродно — лесные дороги в темноте: звери на дороге, держите 70–80 км/ч. Заправьтесь до выезда.',
  tm:['7.11 праздник: замки, возможно, до 17:00 с кассой до 16:00 — идите с утра.','В центре Гродно возможны перекрытия — паркуйтесь в стороне от Советской площади.','Ужин в Лиде найдите заранее: кафе закрываются к 20–21.']},
-'7.11':{r:[['08:30','Завтрак'],['10:00','Старый замок, Гродно и Новый замок, Гродно'],['12:00','Обед'],['13:00','Коложская церковь, набережная Немана, Фарный костёл, Советская площадь'],['14:30','Гродно → меловые карьеры · 1 ч · 75 км',1],['15:30','Меловые карьеры: смотровые, бирюзовые озёра. Закат около 17:35'],['16:45','Карьеры → Лида · 1 ч 30 мин · 100 км, в темноте',1],['18:30','Заселение, ужин']],
+'7.11':{r:[['08:30','Завтрак'],['10:00','Старый замок и Новый замок'],['12:00','Обед'],['13:00','Коложская церковь, набережная Немана, Фарный костёл Святого Франциска Ксаверия, Советская площадь'],['14:30','Гродно → меловые карьеры · 1 ч · 75 км',1],['15:30','Меловые карьеры: смотровые, бирюзовые озёра. Закат около 17:35'],['16:45','Карьеры → Лида · 1 ч 30 мин · 100 км, в темноте',1],['18:30','Заселение, ужин']],
  n:'Карьеры: вход свободный, смотрите с верхних площадок — склоны крутые и скользкие, особенно после дождя. Точку парковки задайте заранее и приезжайте не позже 15:30.',
- tm:['Лидский замок пускает в башни партиями — будьте у входа к 10:00.','Поезд 008 завтра в 21:35: билеты и паспорта держите под рукой.']},
+ tm:['Лидский замок пускает в башни партиями — будьте у входа к 10:00.']},
 '8.11':{r:[['08:30','Завтрак, выписка'],['09:45','Лидский замок, затем Костёл Воздвижения Святого Креста — пешком'],['11:00','Лида → Свитязь · 1 ч · 75 км',1],['12:00','Озеро Свитязь: берег и лесная тропа'],['13:00','Свитязь → Минск · 2 ч 30 мин · 150 км, обед по пути',1],['15:30','Полный бак и сдача машины у вокзала'],['16:00','Вещи в камеру хранения вокзала'],['16:15','Красный костёл, Верхний город, Троицкое предместье, Остров слёз, ужин. Национальная библиотека — по желанию'],['21:00','Забрать вещи, на вокзал'],['21:35','Поезд 008 → Москва Белорусская, 06:56']],
  n:'У озера ветрено — тёплое наверх. Погранконтроля между Беларусью и Россией нет, на вокзал за 20–30 минут.'}};
 const BK=[['4.11','Alfarent: Volkswagen up! 2019, механика, АИ-95. Подача к вокзалу 8:00, доставка 40 BYN в одну сторону, залог 300 BYN, аренда ≈314 BYN за 5 суток. ⏳ подтвердить подачу, лимит пробега, резину','https://alfarent.by/prokat-auto/volkswagen-up','Alfarent'],
@@ -1713,9 +1712,13 @@ const BK=[['4.11','Alfarent: Volkswagen up! 2019, механика, АИ-95. П�
 ['8.11','Поезд 008: Минск-Пассажирский 21:35 → Москва Белорусская 06:56 ✅']];
 // ─── ГЕОМЕТРИЯ
 const hv=(a,b)=>{const t=Math.PI/180,x=Math.sin((b[0]-a[0])*t/2)**2+Math.cos(a[0]*t)*Math.cos(b[0]*t)*Math.sin((b[1]-a[1])*t/2)**2;return 12742*Math.asin(Math.sqrt(x))};
-LEGS.forEach((l,j)=>{const r=DAYR[l.d];l.km=r.km;l.route=r.c;l.en=PL.filter(p=>p.b===j&&p.k==='en');l.dst=j<4?B[j].ll:MSK;});
-B.forEach((b,i)=>{b.route=LEGS[i].route;b.all=PL.filter(p=>p.b===i)});
-const routeAll=LEGS.flatMap(l=>l.route);
+let WX=null,WXERR=false;
+const DKEYS=Object.keys(DAYPLAN);
+const NIGHT=k=>k==='8.11'?null:DAYPLAN[k].b;
+const DRV={'4.11':'≈4 ч','5.11':'≈2,5 ч','6.11':'≈4 ч','7.11':'≈2,5 ч','8.11':'≈3 ч'};
+PL.forEach(p=>p.di=DKEYS.indexOf(p.d));
+B.forEach(b=>{b.route=DAYR[b.days[0]].c;b.all=PL.filter(p=>p.d===b.days[0])});
+const routeAll=DKEYS.flatMap(k=>DAYR[k].c);
 const nw=n=>n==1?'ночь':n<5?'ночи':'ночей';
 const RM=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 const DARK=()=>document.documentElement.dataset.theme==='dark',CAS=()=>DARK()?'#1c1917':'#fff';
@@ -1725,7 +1728,7 @@ let GREY='#9b9797',GREY4='#bab6b6';
 const dtf=t=>{const d=new Date(t),p=n=>String(n).padStart(2,'0');return p(d.getDate())+'.'+p(d.getMonth()+1)+' '+p(d.getHours())+':'+p(d.getMinutes())};
 function sunset(k,ll){const dd=+k.split('.')[0],n=304+dd,Bb=2*Math.PI*(n-81)/364,eot=9.87*Math.sin(2*Bb)-7.53*Math.cos(Bb)-1.5*Math.sin(Bb),de=23.44*Math.sin(2*Math.PI*(n-81)/365)*Math.PI/180,f=ll[0]*Math.PI/180;
  const H=Math.acos((Math.sin(-0.833*Math.PI/180)-Math.sin(f)*Math.sin(de))/(Math.cos(f)*Math.cos(de)))*180/Math.PI,m=Math.round(720-4*ll[1]-eot+4*H+180);return Math.floor(m/60)+':'+String(m%60).padStart(2,'0')}
-let cur=0,topH=90,cardsH=220,SW=0;const WIDE=()=>matchMedia('(min-width:760px)').matches;
+let cur=0,DAY=null,topH=90,cardsH=220,SW=0;const WIDE=()=>matchMedia('(min-width:760px)').matches;
 function DRAW(ps){ps=ps.filter(p=>p&&p._path);if(RM()||!ps.length)return;ps.forEach(p=>p._path.style.opacity=0);let done=0;
  const go=()=>{if(done)return;done=1;const E=ps.map(p=>p._path).filter(e=>e.isConnected);if(!E.length)return;const D=900;
   E.forEach(e=>{const n=e.getTotalLength();e.style.transition='none';e.style.strokeDasharray=n;e.style.strokeDashoffset=n;e.style.opacity='';e.getBoundingClientRect();e.style.transition=`stroke-dashoffset ${D}ms cubic-bezier(.3,0,0,1)`;e.style.strokeDashoffset=0;setTimeout(()=>{e.style.strokeDasharray='';e.style.strokeDashoffset='';e.style.transition=''},D+60)})};
@@ -1740,33 +1743,25 @@ const map=L.map('map',{crs:L.CRS.EPSG3395,zoomControl:false,zoomSnap:.25,wheelPx
  L.tileLayer(U,{sc:devicePixelRatio>1?2:1,attribution:'© Яндекс',crossOrigin:'anonymous',maxZoom:19,keepBuffer:4,updateWhenZooming:false,errorTileUrl:'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='}).addTo(map);
  window.setTiles=()=>{};window.curTile=()=>({url:U.replace('{sc}',devicePixelRatio>1?2:1),st:'ya'});})();
 const lyrRoute=L.layerGroup().addTo(map),lyrSights=L.layerGroup().addTo(map),lyrBases=L.layerGroup().addTo(map);
-function eqH(){const c=$('#cards');if(!c)return;c.style.removeProperty('--eqH');if(WIDE()||DAY||LEGM!=null)return;const ks=[...c.children];if(ks.length<2)return;c.style.setProperty('--eqH',Math.max(...ks.map(x=>x.offsetHeight))+'px')}
-function curCardH(){const c=$('#cards');try{const el=(DAY||LEGM!=null)?c.firstElementChild:(c.querySelector('.card2.cur')||c.firstElementChild);if(!el)return c.offsetHeight;const cs=getComputedStyle(c);return el.offsetHeight+parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom)}catch(e){return c.offsetHeight}}
+function eqH(){const c=$('#cards');if(!c)return;c.style.removeProperty('--eqH');if(WIDE())return;const ks=[...c.children];if(ks.length<2)return;c.style.setProperty('--eqH',Math.max(...ks.map(x=>x.offsetHeight))+'px')}
+function curCardH(){const c=$('#cards');try{const el=c.querySelector('.card2.cur')||c.firstElementChild;if(!el)return c.offsetHeight;const cs=getComputedStyle(c);return el.offsetHeight+parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom)}catch(e){return c.offsetHeight}}
 function layout(){eqH();const w=WIDE(),oh=$('#top').offsetHeight;SW=w?(parseFloat(CV('--sw'))||400)+20:0;if(!oh)return;const th=oh+10;document.documentElement.style.setProperty('--topH',th+'px');topH=w?0:th;cardsH=w?0:curCardH();document.documentElement.style.setProperty('--cardsH',cardsH+'px');}
 const dir={l:'left',r:'right',t:'top',b:'bottom'};
 let BT=[];
-function baseMk(i,on,lyr){const b=B[i],hh=on?32:26,w=hh,lab=String(i+1);
- const m=L.marker(b.ll,{icon:L.divIcon({className:'',html:`<div class="bm${on?' on':''}" style="width:${w}px;height:${hh}px">${lab}</div>`,iconSize:[w,hh],iconAnchor:[w/2,hh/2]}),zIndexOffset:on?2000:1000}).addTo(lyr);
- const d=dir[b.lab]||'right';m.bindTooltip(b.n,{permanent:true,direction:d,offset:d==='left'?[-w/2-2,0]:[w/2+2,0],className:'lb lbase'+(on?' on':'')});BT.push({m,d,w,hh});return m}
+function baseMk(i,on,lyr){const b=B[i],hh=on?32:26,w=hh,d0=b.days[0];
+ const m=L.marker(b.ll,{icon:L.divIcon({className:'',html:`<div class="bm${on?' on':''}" style="width:${w}px;height:${hh}px">${d0.split('.')[0]}</div>`,iconSize:[w,hh],iconAnchor:[w/2,hh/2]}),zIndexOffset:on?2000:1000}).addTo(lyr);
+ const d=dir[b.lab]||'right';m.bindTooltip(`${d0} ${b.n}`,{permanent:true,direction:d,offset:d==='left'?[-w/2-2,0]:[w/2+2,0],className:'lb lbase'+(on?' on':'')});BT.push({m,d,w,hh});
+ m.on('click',e=>{L.DomEvent.stop(e);goCard(DKEYS.indexOf(d0)+1)});return m}
 function mskMk(lyr){const m=L.marker(MSK,{icon:L.divIcon({className:'',html:`<div class="sm">${svgI('trn','')}</div>`,iconSize:[28,28],iconAnchor:[14,14]}),zIndexOffset:1500}).addTo(lyr);m.bindTooltip('Минск',{permanent:true,direction:'top',offset:[0,-14],className:'lb lbase'});BT.push({m,d:'top',w:28,hh:28});m.on('click',e=>{L.DomEvent.stop(e);goCard(0)});return m}
-function sightMk(p,dash){const ll=p.ll;if(dash)L.polyline([dash,ll],{color:RC(),opacity:.5,weight:2,dashArray:'2 6',lineCap:'round',interactive:false}).addTo(lyrSights);
- const m=L.marker(ll,{icon:L.divIcon({className:'',html:`<div class="sm">${svgI(p.ic,'')}</div>`,iconSize:[28,28],iconAnchor:[14,14]}),zIndexOffset:500}).addTo(lyrSights);
- m.bindTooltip(p.n,{permanent:true,direction:'right',offset:[12,0],className:'lb ls'});m.on('click',e=>{L.DomEvent.stop(e);showPop(p.id)});}
 function greyMk(p,fn){const m=L.circleMarker(p.ll,{radius:4,color:CAS(),weight:1.5,fillColor:GREY,fillOpacity:1}).addTo(lyrSights);m.on('click',e=>{L.DomEvent.stop(e);fn()})}
-function render(){
- if(DAY)return renderDay();
+function render(){if(DAY)return renderDay();
  lyrRoute.clearLayers();lyrSights.clearLayers();lyrBases.clearLayers();BT=[];
- const act=cur>0?cur-1:null,legOn=LEGM!=null;
- LEGS.forEach((l,j)=>{const on=legOn&&LEGM===j,hi=on||(act==null&&!legOn),past=isPast(l.d);
-  if(hi){const pw=L.polyline(l.route,{color:CAS(),weight:on?10:7,interactive:false,lineJoin:'round'}).addTo(lyrRoute);const pr=L.polyline(l.route,{color:past?GREY:RC(),weight:on?5.5:3.5,opacity:past?.6:1,interactive:false,lineJoin:'round'}).addTo(lyrRoute);if(on)DRAW([pw,pr])}
-  else L.polyline(l.route,{color:GREY,weight:3,opacity:.75,interactive:false,lineJoin:'round'}).addTo(lyrRoute);
-  L.polyline(l.route,{color:'#000',opacity:0,weight:22,lineJoin:'round'}).on('click',e=>{L.DomEvent.stop(e);openLeg(j)}).addTo(lyrRoute);});
- PL.forEach(p=>{
-  if(legOn&&p.b===LEGM&&p.k==='en')sightMk(p);
-  else if(!legOn&&act!=null&&p.b===act&&p.k==='pl')sightMk(p,B[act].ll);
-  else greyMk(p,()=>{if(p.k==='en')openLeg(p.b);else goCard(p.b+1);setTimeout(()=>showPop(p.id),700)});});
- mskMk(lyrBases);
- B.forEach((b,i)=>{const m=baseMk(i,act===i||(legOn&&LEGM===i),lyrBases);m.on('click',e=>{L.DomEvent.stop(e);goCard(i+1)})});
+ DKEYS.forEach((k,i)=>{const r=DAYR[k].c,past=isPast(k);
+  L.polyline(r,{color:CAS(),weight:7,interactive:false,lineJoin:'round'}).addTo(lyrRoute);
+  L.polyline(r,{color:past?GREY:RC(),weight:3.5,opacity:past?.6:1,interactive:false,lineJoin:'round'}).addTo(lyrRoute);
+  L.polyline(r,{color:'#000',opacity:0,weight:22,lineJoin:'round'}).on('click',e=>{L.DomEvent.stop(e);goCard(i+1)}).addTo(lyrRoute);});
+ PL.forEach(p=>greyMk(p,()=>{goCard(p.di+1);setTimeout(()=>showPop(p.id),700)}));
+ mskMk(lyrBases);B.forEach((b,i)=>baseMk(i,false,lyrBases));
  requestAnimationFrame(declutter);}
 function setDir(t,d){const tt=t.m.getTooltip();if(!tt||tt.options.direction===d)return;tt.options.direction=d;tt.options.offset=d==='left'?[-t.w/2-2,0]:d==='right'?[t.w/2+2,0]:d==='top'?[0,-t.hh/2-2]:[0,t.hh/2+2];tt.update()}
 function placeBases(placed){const W=innerWidth,H=innerHeight,ov=(r,p)=>!(r.right<=p.left+1||r.left>=p.right-1||r.bottom<=p.top+1||r.top>=p.bottom-1);
@@ -1783,94 +1778,71 @@ function declutter(){const hit=(r,p)=>!(r.right<p.left||r.left>p.right||r.bottom
   if(base)return;if(r.top<topH||r.left<SW||r.bottom>innerHeight-cardsH||r.right>innerWidth||placed.some(p=>hit(r,p)))e.style.visibility='hidden';else placed.push(r);});}
 map.on('zoomend moveend',declutter);
 // ─── ДЕНЬ
-let DAY=null,LEGM=null;const DKEYS=Object.keys(DAYPLAN);
 function stopsOf(k){return DAYPLAN[k].s.map(t=>{const walk=t[0]==='~',n=walk?t.slice(1):t;if(n==='@M')return {ll:MSK,msk:1,n:'Минск'};if(n[0]==='@'){const bi=+n.slice(1);return {ll:B[bi].ll,base:bi,n:B[bi].n}}const p=PN[n];return p?{ll:p.ll,p,n,walk}:null}).filter(Boolean)}
+function goU(k){const st=stopsOf(k),nb=NIGHT(k);let lb=-1;st.forEach((s,i)=>{if(i>0&&s.base!=null&&s.base===nb)lb=i});
+ const up=lb<0?st.length:lb,pts=[];for(let i=1;i<up;i++){const s=st[i];if(s.p&&!s.walk&&s.p.ic!=='car')pts.push(s.ll)}
+ return YR([...pts,nb==null?MSK:B[nb].ll])}
 function renderDay(){lyrRoute.clearLayers();lyrSights.clearLayers();lyrBases.clearLayers();BT=[];
- LEGS.forEach(l=>L.polyline(l.route,{color:GREY4,weight:2.5,opacity:.7,interactive:false}).addTo(lyrRoute));
- const st=stopsOf(DAY),r=DAYR[DAY];
+ DKEYS.forEach(k=>L.polyline(DAYR[k].c,{color:GREY4,weight:2.5,opacity:.7,interactive:false}).addTo(lyrRoute));
+ const st=stopsOf(DAY),r=DAYR[DAY],nb=NIGHT(DAY);
  DRAW([L.polyline(r.c,{color:CAS(),weight:10,interactive:false,lineJoin:'round'}).addTo(lyrRoute),L.polyline(r.c,{color:RC(),weight:5.5,interactive:false,lineJoin:'round'}).addTo(lyrRoute)]);
  st.forEach(s=>{if(!s.p)return;let bd=1e9,bp=null;for(const p of r.c){const d=hv(p,s.ll);if(d<bd){bd=d;bp=p}}if(bd>.25)L.polyline([bp,s.ll],{color:RC(),opacity:.5,weight:3,dashArray:'2 7',lineCap:'round',interactive:false}).addTo(lyrRoute)});
  let n=0;const seen=new Set();
- st.forEach(s=>{if(s.base!=null){if(seen.has(s.base))return;seen.add(s.base);baseMk(s.base,true,lyrBases);return}
+ st.forEach(s=>{if(s.base!=null){if(seen.has(s.base))return;seen.add(s.base);baseMk(s.base,s.base===nb,lyrBases);return}
   if(s.msk){mskMk(lyrBases);return}
   n++;const m=L.marker(s.ll,{icon:L.divIcon({className:'',html:`<div class="dn"></div>`,iconSize:[16,16],iconAnchor:[8,8]}),zIndexOffset:1000-n}).addTo(lyrSights);
   m.bindTooltip(s.n,{permanent:true,direction:'right',offset:[10,0],className:'lb ls'});m.on('click',e=>{L.DomEvent.stop(e);showPop(s.p.id)});});
  if(DAY==='8.11')mskMk(lyrBases);
  requestAnimationFrame(declutter);}
-function dayCard(k){const p=DAYPLAN[k],b=B[p.b],r=DAYR[k],dd=k.split('.')[0],cnt=new Set(stopsOf(k).filter(s=>s.p).map(s=>s.n)).size,lg=LEGS[k==='8.11'?4:p.b];
- const f=WX&&fmtD(WX.b[p.b],iso(k));
+function wxCell(k){const b=B[DAYPLAN[k].b],f=WX&&fmtD(WX.b[DAYPLAN[k].b],iso(k));
  const wx=f?`<b class="v">${f.mx}° / ${f.mn}°</b><small>прогноз · закат ${sunset(k,b.ll)}</small>`:`<b class="v">${b.w}</b><small>норма · закат ${sunset(k,b.ll)}</small>`;
  const wxd=WXERR?`<i class="wxd" title="Нет сети${f?' · прогноз от '+dtf(WX.t):''}" aria-label="нет сети"></i>`:'';
- const ix=DKEYS.indexOf(k),last=ix===DKEYS.length-1;
- return `<article class="card2"><div class="chd"><div class="num">${dd}</div><div><div class="nm one">${DT[k]}</div><div class="sub one">${WD[k]}, ${dd} <i class="mf">ноября</i><i class="ms">ноя</i> · ${k==='8.11'?'поезд в 21:35':'ночь: '+b.n}</div></div><button class="x" data-xday aria-label="К базе">${svgI('x','')}</button></div>
-<div class="row dr2"><div>${svgI('car')}<span><b class="v">${r.km} км</b><small>${lg.time} за рулём</small></span></div><div>${f?WIc(f.w):svgI('thr')}<span>${wx}</span>${wxd}</div></div>
-<div class="acts"><button class="btn btn-primary" data-dsh="${k}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-dsh="${k}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button>${ix>0?`<button class="btn btn-secondary btn-icon" data-seq="${ix-1}" aria-label="Назад"${last?' style="flex:0 0 80px;border-radius:999px"':''}>${svgI('cl')}</button>`:''}${last?'':`<button class="btn btn-secondary btn-icon" data-seq="${ix+1}" aria-label="Дальше"${ix===0?' style="flex:0 0 80px;border-radius:999px"':''}>${svgI('cr')}</button>`}</div></article>`}
-function markStrip(){document.querySelectorAll('.dy').forEach(e=>e.classList.toggle('sel',e.dataset.d===DAY))}
-function selectDay(k,anim=true){if(!DAYPLAN[k])return;DAY=k;LEGM=null;cur=DAYPLAN[k].b+1;hidePop();closeSheet();
- document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',+e.dataset.i===cur));markStrip();
- cards.innerHTML=dayCard(k);cards.scrollLeft=0;layout();renderDay();fly(L.latLngBounds([...stopsOf(k).map(s=>s.ll),...DAYR[k].c]),15,anim);}
-const goSeq=n=>DKEYS[n]?(selectDay(DKEYS[n]),true):false;
-const stepSeq=d=>DAY?goSeq(DKEYS.indexOf(DAY)+d):false;
+ return `${f?WIc(f.w):svgI('thr')}<span>${wx}</span>${wxd}`}
+const nightTx=k=>k==='8.11'?'поезд 008 в 21:35':'ночь: '+B[NIGHT(k)].n;
+function dayCard(k){const r=DAYR[k],dd=k.split('.')[0],cnt=new Set(stopsOf(k).filter(s=>s.p).map(s=>s.n)).size,ix=DKEYS.indexOf(k),last=ix===DKEYS.length-1,nb=NIGHT(k);
+ return `<article class="card2" data-k="${k}"><div class="chd" style="grid-template-columns:auto 1fr"><div class="num">${dd}</div><div><div class="nm one">${DT[k]}</div><div class="sub one">${WD[k]}, ${dd} <i class="mf">ноября</i><i class="ms">ноя</i> · ${nightTx(k)}</div></div></div>
+<div class="row dr2"><div>${svgI('car')}<span><b class="v">${r.km} км</b><small>${DRV[k]} за рулём</small></span></div><div id="wx-${dd}">${wxCell(k)}</div></div>
+<div class="acts"><button class="btn btn-primary" data-dsh="${k}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-dsh="${k}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button>${nb!=null?`<button class="btn btn-secondary btn-icon" data-dsh="${k}" data-t="home" aria-label="Жильё">${svgI('bed')}</button>`:''}${ix>0?`<button class="btn btn-secondary btn-icon" data-go="${ix}" aria-label="Предыдущий день">${svgI('cl')}</button>`:''}${last?'':`<button class="btn btn-secondary btn-icon" data-go="${ix+2}" aria-label="Следующий день">${svgI('cr')}</button>`}</div>
+<a class="lgb" href="${goU(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'вокзал Минск-Пассажирский':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
+function markStrip(){document.querySelectorAll('.dy').forEach(e=>e.classList.toggle('sel',e.dataset.d===DAY));document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',cur===0||+e.dataset.i===cur))}
 function fly(bb,mz,anim){layout();const o={paddingTopLeft:[(SW?28:44)+SW,topH+30],paddingBottomRight:[28,cardsH+20],maxZoom:mz};map.stop();
  if(!anim||RM())return map.fitBounds(bb,{...o,animate:false});const c=map.getBounds(),far=!c.pad(.5).intersects(bb);map.flyToBounds(bb,{...o,duration:far?1.4:1,easeLinearity:.2});}
-function exitDay(i){DAY=null;markStrip();cards.innerHTML=ch;layout();paintWx();toCard(cards.children[i]);focus(i,true);}
-function focus(i,anim=true){cur=i;hidePop();
- document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',i===0||+e.dataset.i===i));
- [...cards.children].forEach((c,j)=>c.classList.toggle('cur',!DAY&&LEGM==null&&j===i));
- render();const lls=i===0?[...routeAll,MSK]:(()=>{const b=B[i-1];return [b.ll,...b.all.filter(p=>p.k==='pl').map(p=>p.ll)]})();
- fly(L.latLngBounds(lls),14,anim);}
+function focus(i,anim=true){cur=i;DAY=i>0?DKEYS[i-1]:null;hidePop();markStrip();
+ [...cards.children].forEach((c,j)=>c.classList.toggle('cur',j===i));
+ render();layout();const lls=DAY?[...stopsOf(DAY).map(s=>s.ll),...DAYR[DAY].c]:[...routeAll,MSK];
+ fly(L.latLngBounds(lls),DAY?15:14,anim);}
 const qd=new URLSearchParams(location.search).get('today');const now=qd?new Date(qd+'T12:00'):new Date();
 const TODAY=now.getFullYear()===2026&&now.getMonth()===10?`${now.getDate()}.11`:null;const TDn=TODAY?+TODAY.split('.')[0]:0;
 function isPast(k){return !!TDn&&+String(k).split('.')[0]<TDn}
-// шкала
-$('#strip').innerHTML=B.map((b,i)=>`<div class="sg" style="--n:${b.days.length}" data-i="${i+1}">${b.days.map(d=>`<button class="dy${isPast(d)?' past':''}${d===TODAY?' now':''}" data-d="${d}" aria-label="${d} · ${DT[d]}"></button>`).join('')}<small>${b.days[0].split('.')[0]}${b.days.length>1?'–'+b.days[b.days.length-1].split('.')[0]:''}</small></div>`).join('');
-$('#strip').onclick=e=>{const s=e.target.closest('.dy');if(s){DAY===s.dataset.d?exitDay(DAYPLAN[DAY].b+1):selectDay(s.dataset.d)}};
+// шкала: пять дней
+$('#strip').innerHTML=DKEYS.map((k,i)=>`<div class="sg" style="--n:1" data-i="${i+1}"><button class="dy${isPast(k)?' past':''}${k===TODAY?' now':''}" data-d="${k}" aria-label="${k} · ${DT[k]}"></button><small>${k.split('.')[0]}</small></div>`).join('');
+$('#strip').onclick=e=>{const s=e.target.closest('.dy');if(s){const i=DKEYS.indexOf(s.dataset.d)+1;goCard(cur===i?0:i)}};
 $('#fitBtn').onclick=()=>goCard(0);
-if(TODAY&&DAYPLAN[TODAY]){$('#todayBtn').hidden=false;$('#todayBtn').onclick=()=>selectDay(TODAY)}
+if(TODAY&&DAYPLAN[TODAY]){$('#todayBtn').hidden=false;$('#todayBtn').onclick=()=>goCard(DKEYS.indexOf(TODAY)+1)}
 function applyTheme(){const d=DARK();GREY=d?'#6f6966':'#9b9797';GREY4=d?'#4f4a47':'#bab6b6';window.paintBase&&paintBase();window.setTiles&&setTiles()}
-applyTheme();addEventListener('themechange',()=>{applyTheme();DAY?renderDay():render()});
+applyTheme();addEventListener('themechange',()=>{applyTheme();render()});
 $('#themeBtn').onclick=()=>__thm.set(DARK()?'light':'dark');
-// ─── ПЕРЕГОНЫ
-const legNav=j=>`<button class="btn btn-secondary btn-icon" data-lg="${j-1}" ${j>0?'':'disabled'} aria-label="Предыдущий перегон">${svgI('cl')}</button><button class="btn btn-secondary btn-icon" data-lg="${j+1}" ${j<LEGS.length-1?'':'disabled'} aria-label="Следующий перегон">${svgI('cr')}</button>`;
-const goU=j=>{const l=LEGS[j];return YR([...l.en.filter(p=>p.n!=='Вокзал Минск-Пассажирский'&&!/^~/.test(DAYPLAN[l.d].s.find(t=>t.replace(/^~/,'')===p.n)||'')).map(p=>p.ll),l.dst])};
-function openLeg(j,anim=true){if(!LEGS[j])return;DAY=null;markStrip();LEGM=j;hidePop();closeSheet();cards.innerHTML=legCard(j);cards.scrollLeft=0;layout();cur=j<4?j+1:4;
- document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',+e.dataset.i===cur));render();fly(L.latLngBounds([...LEGS[j].route,...LEGS[j].en.map(p=>p.ll)]),13,anim);}
-function exitLeg(){const c=Math.min(LEGM+1,B.length);LEGM=null;cards.innerHTML=ch;layout();paintWx();toCard(cards.children[c]);focus(c,true)}
-function legCard(j){const l=LEGS[j],dd=l.d.split('.')[0];return `<article class="card2 leg"><div class="chd" style="grid-template-columns:1fr auto"><div><div class="nm">${l.f} → ${l.t}</div><div class="sub">перегон · ${WD[l.d]}, ${dd} ноября</div></div><button class="x" data-xleg aria-label="К базе">${svgI('x','')}</button></div>
-<div class="row"><div>${svgI('car')}<span><b>${l.time} · ${l.km} км</b><small>${l.via}</small></span></div></div>
-<div class="acts">${l.en.length?`<button class="btn btn-primary" data-lsh="${j}">Места по пути <span>${l.en.length}</span></button>`:''}<a class="btn btn-secondary" style="text-decoration:none" href="${goU(j)}" target="_blank" rel="noopener">В путь<span>→</span></a>${legNav(j)}</div></article>`}
 // ─── КАРТОЧКИ
-let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней</div><div class="wxl">${svgI('car')}<span><b>≈1170 км</b><small>4 базы · старт и финиш в Минске</small></span></div></div><div class="nts"><strong>4</strong>ночи</div></div>
+let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней</div><div class="wxl">${svgI('car')}<span><b>≈1170 км</b><small>4 ночёвки · старт и финиш в Минске</small></span></div></div><div class="nts"><strong>4</strong>ночи</div></div>
 <div class="flt"><div><b>Прибытие <small>· ср 4.11</small></b><small>Минск-Пассажирский 06:40</small></div><div><b>Поезд 008 <small>· вс 8.11</small></b><small>Минск 21:35 → Москва 06:56</small></div></div>
 <button class="offl" id="offb">${svgI('dl')}<span>Сохранить карту для офлайна</span><em></em></button>
-<a class="lgb" href="${goU(0)}" target="_blank" rel="noopener">${svgI('car')}<span>В Берёзу</span><em>${LEGS[0].time} · ${LEGS[0].km} км</em>${svgI('cr')}</a></article>`;
-B.forEach((b,i)=>{const cnt=b.all.length+(i===3?LEGS[4].en.length:0);ch+=`<article class="card2"><div class="chd"><div class="num">${i+1}</div><div><div class="nm">${b.n}</div><div class="sub">${b.c} · ${b.dt}</div><div class="wxl">${svgI('thr')}<span id="wx${i}"><b>${b.w}</b><small>${b.wn}</small></span></div></div><div class="nts"><strong>${b.ni}</strong>${nw(b.ni)}</div></div>
-<div class="dts">${b.days.map(d=>`<button class="dtc${d===TODAY?' now':''}" data-day="${d}" aria-label="${d} · ${DT[d]} — на карте">${d.split('.')[0]}<small>${WD[d]}</small></button>`).join('')}</div>
-<div class="acts"><button class="btn btn-primary" data-sh="${i}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-sh="${i}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button><button class="btn btn-secondary btn-icon" data-sh="${i}" data-t="home" aria-label="Жильё">${svgI('bed')}</button></div><button class="lgb" data-lg="${i+1}">${svgI('car')}<span>${LEGS[i+1].t}</span><em>${LEGS[i+1].time} · ${LEGS[i+1].km} км</em>${svgI('cr')}</button></article>`;});
+<button class="lgb" data-go="1">${svgI('car')}<span>В Берёзу</span><em>4.11 · ${DRV['4.11']} · ${DAYR['4.11'].km} км</em>${svgI('cr')}</button></article>`;
+ch+=DKEYS.map(dayCard).join('');
 $('#cards').innerHTML=ch;
 const cards=$('#cards');
-if(window.ResizeObserver){const ro=new ResizeObserver(()=>{if(!WIDE())layout()});const obs=()=>{ro.disconnect();[...cards.children].forEach(c=>ro.observe(c))};new MutationObserver(obs).observe(cards,{childList:true});obs()}
+if(window.ResizeObserver){const ro=new ResizeObserver(()=>{if(!WIDE())layout()});[...cards.children].forEach(c=>ro.observe(c))}
 function toCard(c,sm){if(!c)return;const b=sm?'smooth':'auto';WIDE()?cards.scrollTo({top:Math.max(0,cards.scrollTop+c.getBoundingClientRect().top-$('#top').getBoundingClientRect().bottom-10),behavior:b}):cards.scrollTo({left:c.offsetLeft-(cards.clientWidth-c.offsetWidth)/2,behavior:b})}
-function goCard(i){if(DAY){exitDay(i);return}if(LEGM!=null){LEGM=null;cards.innerHTML=ch;layout();paintWx();toCard(cards.children[i]);focus(i,true);return}toCard(cards.children[i],1);if(i!==cur)focus(i,true)}
-let stt;cards.addEventListener('scroll',()=>{if(DAY||LEGM!=null||WIDE())return;clearTimeout(stt);stt=setTimeout(()=>{if(DAY||LEGM!=null)return;
+function goCard(i){closeSheet();toCard(cards.children[i],1);if(i!==cur)focus(i,true)}
+let stt;cards.addEventListener('scroll',()=>{if(WIDE())return;clearTimeout(stt);stt=setTimeout(()=>{
  const mid=cards.scrollLeft+cards.clientWidth/2;let best=0,bd=1e9;[...cards.children].forEach((c,j)=>{const d=Math.abs(c.offsetLeft+c.offsetWidth/2-mid);if(d<bd){bd=d;best=j}});if(best!==cur)focus(best,true);},90)});
 cards.onclick=e=>{if(e.target.closest('#offb')){window.offToggle&&offToggle();return}
- if(WIDE()&&!DAY&&LEGM==null){const a=e.target.closest('.card2'),j=a?[...cards.children].indexOf(a):-1;if(j>=0&&j!==cur&&!e.target.closest('[data-lg],a,[data-day],[data-sh]'))focus(j,true)}
- const dy=e.target.closest('[data-day]');if(dy){selectDay(dy.dataset.day);return}
- if(e.target.closest('[data-xday]')){exitDay(DAYPLAN[DAY].b+1);return}
- const sq=e.target.closest('[data-seq]');if(sq){goSeq(+sq.dataset.seq);return}
- const lg=e.target.closest('[data-lg]');if(lg){openLeg(+lg.dataset.lg);return}
- if(e.target.closest('[data-xleg]')){exitLeg();return}
- const ls=e.target.closest('[data-lsh]');if(ls){openSheet({leg:+ls.dataset.lsh},'pl');return}
- const ds=e.target.closest('[data-dsh]');if(ds){openSheet({day:ds.dataset.dsh},ds.dataset.t);return}
- const s=e.target.closest('[data-sh]');if(s)openSheet({base:+s.dataset.sh},s.dataset.t)};
-(()=>{let x0,y0;cards.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
- cards.addEventListener('touchend',e=>{if(!DAY&&LEGM==null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;if(Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.3)return;
-  const ok=DAY?stepSeq(dx<0?1:-1):(()=>{const n=LEGM+(dx<0?1:-1);if(!LEGS[n])return false;openLeg(n);return true})();
-  if(ok)cards.firstElementChild.animate([{transform:`translateX(${dx<0?40:-40}px)`,opacity:.4},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.8,.2,1)'})});})();
+ if(e.target.closest('a'))return;
+ const g=e.target.closest('[data-go]');if(g){goCard(+g.dataset.go);return}
+ const ds=e.target.closest('[data-dsh]');if(ds){const i=DKEYS.indexOf(ds.dataset.dsh)+1;if(i!==cur){toCard(cards.children[i],1);focus(i,true)}openSheet(ds.dataset.dsh,ds.dataset.t);return}
+ if(WIDE()){const a=e.target.closest('.card2'),j=a?[...cards.children].indexOf(a):-1;if(j>=0&&j!==cur)focus(j,true)}};
 // ─── ПОПОВЕР
 const pop=$('#pop');let SELT=null,PREV=null,POPLL=null;
-function showPop(id){const p=PL[id],d=DESC[p.n];const kd=p.k==='en'?`по дороге · ${LEGS[p.b].f} → ${LEGS[p.b].t}`:`у базы: ${B[p.b].n}`;
+function showPop(id){const p=PL[id],d=DESC[p.n];const kd=`${WD[p.d]}, ${p.d} · ${DT[p.d]}`;
  pop.innerHTML=`<div class="pic">${svgI(p.ic,'')}</div><div><h3>${p.n}</h3><p><b>${p.d}</b> · <span class="drv">${p.dr}</span></p>${d?`<p style="color:var(--color-neutral-900)">${d[0]}</p>${d[1]?`<p><b style="color:var(--color-accent-700)">Интересно:</b> ${d[1]}</p>`:''}`:''}<p style="color:var(--color-neutral-700)">${kd}</p><div class="hl" style="margin-top:8px"><a class="btn btn-secondary" style="padding:7px 10px;font-size:13px;white-space:nowrap" href="${YM(p.n,p.ll)}" target="_blank" rel="noopener">${svgI('pin')}Яндекс Карты</a>${p.site?`<a class="btn btn-secondary" style="padding:7px 10px;font-size:13px" href="${p.site}" target="_blank" rel="noopener">${svgI('lnk')}Сайт</a>`:''}</div></div><button class="x" aria-label="Закрыть">${svgI('x','')}</button>`;
  if(SELT)map.removeLayer(SELT);SELT=L.tooltip({permanent:true,direction:'right',offset:[16,0],className:'lb ls sel'}).setLatLng(p.ll).setContent(p.n).addTo(map);requestAnimationFrame(declutter);
  if(!pop.classList.contains('on'))PREV={c:map.getCenter(),z:map.getZoom()};
@@ -1888,20 +1860,16 @@ function hidePop(){pop.classList.remove('on');POPLL=null;PREV=null;if(SELT){map.
 function closePop(){const pv=PREV;hidePop();if(pv){map.stop();RM()?map.setView(pv.c,pv.z,{animate:false}):map.flyTo(pv.c,pv.z,{duration:.7,easeLinearity:.25})}}
 map.on('click',closePop);
 // ─── ПАНЕЛЬ
-const sheet=$('#sheet');let SC={},stab='pl';
-function openSheet(ctx,tab){SC=ctx;stab=tab;
- $('#tabs').style.display=ctx.leg!=null?'none':'';$('#tabs [data-t=home]').style.display=ctx.day?'none':'';if(ctx.day&&stab==='home')stab='days';
- let hd;if(ctx.leg!=null){const l=LEGS[ctx.leg];hd=`<div class="num">${svgI('car','')}</div><div><div class="nm">${l.f} → ${l.t}</div><div class="sub">перегон · ${WD[l.d]}, ${l.d} · ${l.time} · ${l.km} км</div></div>`}
- else if(ctx.day){const k=ctx.day,b=B[DAYPLAN[k].b];hd=`<div class="num">${k.split('.')[0]}</div><div><div class="nm">${DT[k]}</div><div class="sub">${WD[k]}, ${k.split('.')[0]} ноября · ${k==='8.11'?'поезд 21:35':'ночь: '+b.n}</div></div>`}
- else{const b=B[ctx.base];hd=`<div class="num">${ctx.base+1}</div><div><div class="nm">${b.n}</div><div class="sub">${b.dt} · ${b.ni} ${nw(b.ni)} · ${b.w}</div></div>`}
- $('#shd').innerHTML=hd+`<button class="x" id="shx" aria-label="Закрыть">${svgI('x','')}</button>`;$('#shx').onclick=closeSheet;
+const sheet=$('#sheet');let SC=null,stab='pl';
+const tabsOf=k=>NIGHT(k)==null?['pl','days']:['pl','days','home'];
+function openSheet(k,tab){SC=k;stab=tabsOf(k).includes(tab)?tab:'days';
+ $('#tabs').style.display='';$('#tabs [data-t=home]').style.display=NIGHT(k)==null?'none':'';
+ const dd=k.split('.')[0];
+ $('#shd').innerHTML=`<div class="num">${dd}</div><div><div class="nm">${DT[k]}</div><div class="sub">${WD[k]}, ${dd} ноября · ${nightTx(k)}</div></div><button class="x" id="shx" aria-label="Закрыть">${svgI('x','')}</button>`;$('#shx').onclick=closeSheet;
  renderTab();sheet.classList.add('on');sheet.setAttribute('aria-hidden','false');}
 const posIn=p=>{const a=DAYPLAN[p.d].s,i=a.findIndex(t=>t.replace(/^~/,'')===p.n);return DKEYS.indexOf(p.d)*100+(i<0?99:i)};
-function kLabel(p){return p.k==='en'?svgI('car')+'В дороге · '+LEGS[p.b].f+' → '+LEGS[p.b].t:svgI('bed')+'Из базы · '+B[p.b].n}
-function listHtml(ps,byDay){ps=[...new Set(ps)].sort((a,b)=>posIn(a)-posIn(b));let h='',pd=null,pk=null;
- ps.forEach(p=>{if(byDay&&p.d!==pd){h+=`<div class="grp">${p.d} ${WD[p.d]} · ${DT[p.d]}</div>`;pd=p.d;pk=null}const k=p.k+p.b;if(k!==pk){h+=`<div class="kd kd-${p.k==='en'?'to':'base'}">${kLabel(p)}</div>`;pk=k}h+=plRow(p)});return h}
+function listHtml(ps){ps=[...new Set(ps)].sort((a,b)=>posIn(a)-posIn(b));return ps.map(plRow).join('')}
 function plRow(p){return `<div class="pl" data-id="${p.id}"><div class="pic">${svgI(p.ic,'')}</div><div><h4>${p.n}</h4><p>${p.sh}</p><div class="meta"><span class="d">${p.d}</span><span class="k">${p.dr}</span><a href="${YM(p.n,p.ll)}" target="_blank" rel="noopener" style="display:inline-flex;gap:3px;align-items:center;font-weight:600">${svgI('pin')}Яндекс Карты</a></div></div></div>`}
-const lnk=s=>s;
 function bub(l,m){return `<div class="rg"><span class="rl">${l}</span><div class="bub">${m}</div><button class="cpy" data-cpy="${m.replace(/"/g,'&quot;')}">Скопировать</button></div>`}
 function bkBlock(ds){const r=BK.filter(x=>ds.includes(x[0]));return r.length?`<div class="sd"><div class="sdh"><div class="sdd">${svgI('chk','')}</div><div class="sdt"><h4>Брони и контакты</h4><small>✅ подтверждено · ⏳ сделать</small></div></div>${r.map(x=>`<div class="sr"><b>${x[0]}</b><span>${x[1]}${x[2]?` <a href="${x[2]}" target="_blank" rel="noopener">${x[3]} →</a>`:''}</span></div>`).join('')}</div>`:''}
 let PIDX=null;function pidx(){if(PIDX)return PIDX;PIDX=[];PL.forEach(p=>{new Set([p.n,p.n.split(',')[0].trim()]).forEach(x=>{if(x.length>=5)PIDX.push([x,p.id])})});PIDX.sort((a,c)=>c[0].length-a[0].length);return PIDX}
@@ -1909,46 +1877,43 @@ function chipify(tx){const used=[],hits=[];for(const [v,id] of pidx()){const k=t
  hits.sort((a,c)=>a.k-c.k);let o='',q=0;for(const h of hits){const p=PL[h.id];o+=tx.slice(q,h.k)+`<button class="pc" data-id="${h.id}">${svgI(p.ic,'')}${p.n}</button>`;q=h.e}return o+tx.slice(q)}
 function sRow(r){let tx=r[1],tag='';if(r[2]){const m=tx.match(/\s*·\s*(\d[^·]*(?:ч|мин)[^·]*·\s*[≈~]?\d+\s*км)(.*)$/);if(m){tag=`<em>${m[1].trim()}</em>`;tx=tx.slice(0,m.index)+m[2]}}
  return `<div class="sr${r[2]?' dr':''}"><b>${r[0]}</b><span>${r[2]?`<i class="cr">${svgI('car','')}</i>`:''}${chipify(tx)}${tag}</span></div>`}
-function chkIn(b){const o=b.h;return `<div class="chk">${svgI('bed','')}<div><b>${o.n}</b><small>заезд ${o.ci} · парковка: ${o.p}</small></div><a class="btn btn-secondary" href="${o.ex?YM(o.w+', Гродно',b.ll):YP(b.ll)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>`}
-function sDay(k){const d=DAYS[k],p=DAYPLAN[k],b=B[p.b],dd=k.split('.')[0];
- const sub=(k==='8.11'?'поезд 008 в 21:35':'переезд · ночь: '+b.n)+' · закат '+sunset(k,b.ll);
+const homeMap=b=>b.h.ex?YM(b.h.w+', '+b.n,b.ll):YP(b.ll);
+function chkIn(b){const o=b.h;return `<div class="chk">${svgI('bed','')}<div><b>${o.n}</b><small>заезд ${o.ci} · парковка: ${o.p}</small></div><a class="btn btn-secondary" href="${homeMap(b)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>`}
+function sDay(k){const d=DAYS[k],p=DAYPLAN[k],b=B[p.b],dd=k.split('.')[0],nb=NIGHT(k);
+ const sub=(nb==null?'поезд 008 в 21:35':'ночь: '+b.n)+' · закат '+sunset(k,b.ll);
  return `<div class="sd${k===TODAY?' today':''}" data-d="${k}"><div class="sdh"><div class="sdd"><b>${dd}</b><small>${WD[k]}</small></div><div class="sdt"><h4>${DT[k]}</h4><small>${sub}</small></div>${k===TODAY?'<span class="tdy">сегодня</span>':''}</div>
-${d.pre?`<div class="tmr">${svgI('chk','')}<div><b>Перед поездкой</b>${d.pre.map(t=>`<span>${t}</span>`).join('')}${(d.cp||[]).map(c=>`<div style="margin-top:8px">${bub(c[0],c[1])}</div>`).join('')}</div></div>`:''}
-${d.am?`<div class="tmr am">${svgI('srise','')}<div><b>С утра</b>${d.am.map(t=>`<span>${t}</span>`).join('')}</div></div>`:''}${dayWx(p.b,k)}${d.r.map(sRow).join('')}${d.n?`<div class="sn"><b>Важно</b><span>${d.n}</span></div>`:''}${k!=='8.11'?chkIn(b):''}${d.tm?`<div class="tmr">${svgI('moon','')}<div><b>На завтра</b>${d.tm.map(t=>`<span>${t}</span>`).join('')}</div></div>`:''}</div>`}
+${d.pre&&(d.pre.length||d.cp)?`<div class="tmr">${svgI('chk','')}<div><b>Перед поездкой</b>${d.pre.map(t=>`<span>${t}</span>`).join('')}${(d.cp||[]).map(c=>`<div style="margin-top:8px">${bub(c[0],c[1])}</div>`).join('')}</div></div>`:''}
+${d.am?`<div class="tmr am">${svgI('srise','')}<div><b>С утра</b>${d.am.map(t=>`<span>${t}</span>`).join('')}</div></div>`:''}${dayWx(p.b,k)}${d.r.map(sRow).join('')}${nb!=null?chkIn(B[nb]):''}${d.n?`<div class="sn"><b>Важно</b><span>${d.n}</span></div>`:''}${d.tm&&d.tm.length?`<div class="tmr">${svgI('moon','')}<div><b>На завтра</b>${d.tm.map(t=>`<span>${t}</span>`).join('')}</div></div>`:''}</div>`}
 const MSG=i=>{const b=B[i],d=b.days[0].split('.')[0];return `Здравствуйте! Мы забронировали у вас жильё на ${d}–${+d+1} ноября, нас двое. Приедем на машине около ${b.h.ci.replace(/[^\d:]/g,'')}. Подскажите, пожалуйста, где можно припарковаться и как забрать ключи? Спасибо!`};
-function renderTab(){document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x.dataset.t===stab));let h='';
- if(SC.leg!=null){const l=LEGS[SC.leg];h=l.en.length?listHtml(l.en,false):'<div class="grp">Остановок по пути нет</div>'}
- else if(SC.day){const k=SC.day;if(stab==='pl'){const ps=stopsOf(k).filter(s=>s.p).map(s=>s.p);h=ps.length?listHtml(ps,false):'<div class="grp">В этот день мест нет</div>'}else{h=sDay(k)+bkBlock([k])}}
- else{const i=SC.base,b=B[i];
-  if(stab==='pl')h=listHtml([...b.all,...(i===3?LEGS[4].en:[])],true);
-  else if(stab==='days')h=b.days.map(sDay).join('')+bkBlock(b.days)+srcLinks(i);
-  else{const o=b.h,d0=b.days[0],co=(+d0.split('.')[0]+1)+'.11';
-   h=`<div class="sd"><div class="sdh"><div class="sdd">${svgI('bed','')}</div><div class="sdt"><h4>${o.n}</h4><small>${o.w}</small></div></div>
+function homeHtml(i){const b=B[i],o=b.h,d0=b.days[0],co=(+d0.split('.')[0]+1)+'.11';
+ return `<div class="sd"><div class="sdh"><div class="sdd">${svgI('bed','')}</div><div class="sdt"><h4>${o.n}</h4><small>ночь ${d0} · ${o.w}</small></div></div>
 ${[['ci','Заселение',`<b>${d0}</b> · ${o.ci}`],['co','Выезд',`<b>${co}</b> · ${o.co}`],['car','Парковка',o.p],['rub','Цена',o.pr],['idc','Регистрация','не нужна — гражданам России до 30 дней'],['usr','Хозяину',bub('напишите заранее в чат Суточно.ру:',MSG(i))]].map(r=>`<div class="hrw">${svgI(r[0],'')}<span>${r[1]}</span><div>${r[2]}</div></div>`).join('')}
-<div class="hl"><a class="btn btn-primary" href="${o.u}" target="_blank" rel="noopener">${svgI('lnk')}Суточно.ру</a><a class="btn btn-secondary" href="${o.ex?YM(o.w+', Гродно',b.ll):YP(b.ll)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>
-${o.ex?'<div class="sn nt"><b>Заселение</b><span>Приезд около 21:45 — договоритесь с хозяином заранее. Бронируйте сразу: 7.11 праздник.</span></div>':'<div class="sn nt"><b>Адрес</b><span>Точный адрес и контакт хозяина — в брони на Суточно.ру.</span></div>'}</div>`}}
- $('#sbody').innerHTML=h;$('#sbody').scrollTop=0;const t=$('#sbody .today');if(t)$('#sbody').scrollTop=t.offsetTop-8;}
+<div class="hl"><a class="btn btn-primary" href="${o.u}" target="_blank" rel="noopener">${svgI('lnk')}Суточно.ру</a><a class="btn btn-secondary" href="${homeMap(b)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>
+${o.ex?'<div class="sn nt"><b>Заселение</b><span>Приезд около 21:45 — договоритесь с хозяином заранее. Бронируйте сразу: 7.11 праздник.</span></div>':'<div class="sn nt"><b>Адрес</b><span>Точный адрес и контакт хозяина — в брони на Суточно.ру.</span></div>'}</div>`}
+function renderTab(){document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x.dataset.t===stab));const k=SC;let h='';
+ if(stab==='pl'){const ps=stopsOf(k).filter(s=>s.p).map(s=>s.p);h=ps.length?listHtml(ps):'<div class="grp">В этот день мест нет</div>'}
+ else if(stab==='days')h=sDay(k)+bkBlock([k])+srcLinks();
+ else h=homeHtml(NIGHT(k));
+ $('#sbody').innerHTML=h;$('#sbody').scrollTop=0;}
 $('#tabs').onclick=e=>{const x=e.target.closest('button');if(x){stab=x.dataset.t;renderTab()}};
-const TABS=['pl','days','home'];
 function closeSheet(){sheet.style.transition='';sheet.style.transform='';sheet.classList.remove('on');sheet.setAttribute('aria-hidden','true')}
 (()=>{const sbd=$('#sbody');let x0,y0,lock;
  sbd.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY;lock=null},{passive:true});
  sbd.addEventListener('touchmove',e=>{if(lock)return;const dx=e.touches[0].clientX-x0,dy=e.touches[0].clientY-y0;if(Math.abs(dx)>10||Math.abs(dy)>10)lock=Math.abs(dx)>Math.abs(dy)*1.3?'x':'y'},{passive:true});
- sbd.addEventListener('touchend',e=>{if(lock!=='x')return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)<50||SC.leg!=null)return;const T=SC.day?TABS.slice(0,2):TABS,k=T.indexOf(stab)+(dx<0?1:-1);if(k<0||k>=T.length)return;stab=T[k];renderTab();
+ sbd.addEventListener('touchend',e=>{if(lock!=='x'||!SC)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)<50)return;const T=tabsOf(SC),k=T.indexOf(stab)+(dx<0?1:-1);if(k<0||k>=T.length)return;stab=T[k];renderTab();
   sbd.animate([{transform:`translateX(${dx<0?40:-40}px)`,opacity:.3},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.8,.2,1)'});});
  let sy,sx,dyv=0,drag=0;
- sheet.addEventListener('touchstart',e=>{if(WIDE()){drag=0;return}const t=e.touches[0];sy=t.clientY;sx=t.clientX;dyv=0;if(t.clientY<=$('#tabs').getBoundingClientRect().top||$('#tabs').style.display==='none'&&t.clientY<=sbd.getBoundingClientRect().top){drag=1;sheet.style.transition='none'}else drag=sbd.scrollTop<=0?2:0},{passive:true});
+ sheet.addEventListener('touchstart',e=>{if(WIDE()){drag=0;return}const t=e.touches[0];sy=t.clientY;sx=t.clientX;dyv=0;if(t.clientY<=$('#tabs').getBoundingClientRect().top){drag=1;sheet.style.transition='none'}else drag=sbd.scrollTop<=0?2:0},{passive:true});
  sheet.addEventListener('touchmove',e=>{if(!drag)return;const t=e.touches[0],dy=t.clientY-sy,dx=t.clientX-sx;
   if(drag===2){if(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy)||dy<-5||sbd.scrollTop>0){drag=0;return}if(dy>10){drag=3;sy=t.clientY;sheet.style.transition='none'}else return}
   dyv=Math.max(0,t.clientY-sy);sheet.style.transform=`translateY(${dyv}px)`;if(drag===3&&e.cancelable)e.preventDefault()},{passive:false});
  sheet.addEventListener('touchend',()=>{if(drag!==1&&drag!==3){drag=0;return}drag=0;sheet.style.transition='';if(dyv>90)closeSheet();else sheet.style.transform='';});})();
 $('#sbody').onclick=e=>{const cp=e.target.closest('[data-cpy]');if(cp){const t=cp.dataset.cpy,ok=()=>{cp.textContent='Скопировано';setTimeout(()=>cp.textContent='Скопировать',1800)};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok).catch(()=>{});else{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(x){}a.remove()}return}
  if(e.target.closest('a'))return;const r=e.target.closest('.pl,.pc');if(!r)return;sheet.classList.remove('on');setTimeout(()=>showPop(+r.dataset.id),120);};
-let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{layout();map.invalidateSize();DAY?selectDay(DAY,false):LEGM!=null?openLeg(LEGM,false):focus(cur,false)},150)});
+let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{layout();map.invalidateSize();focus(cur,false)},150)});
 // ─── ПОГОДА
 const WC=c=>c==0?'ясно':c<=2?'малооблачно':c==3?'пасмурно':c<=48?'туман':c<=57?'морось':c<=67?'дождь':c<=77?'снег':c<=82?'ливни':c<=86?'снегопад':'гроза';
 const iso=d=>{const [dd,mm]=d.split('.');return `2026-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}`};
-let WX=null,WXERR=false;
 function fmtD(x,k){if(!x||!x.daily)return null;const j=x.daily.time.indexOf(k);if(j<0)return null;const D=x.daily;const pp=D.precipitation_probability_max?D.precipitation_probability_max[j]:null,mm=D.precip_mm?D.precip_mm[j]:null;
  return {mx:Math.round(D.temperature_2m_max[j]),mn:Math.round(D.temperature_2m_min[j]),p:pp!=null?pp+'%':mm!=null?(mm<0.2?'0 мм':(Math.round(mm*10)/10)+' мм'):null,c:WC(D.weather_code[j]),w:D.weather_code[j]}}
 const WIP={sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>',cs:'<path d="M12 2v2M4.93 4.93l1.41 1.41M20 12h2M19.07 4.93l-1.41 1.41M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/>',cl:'<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',fg:'<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 17H7M17 21H9"/>',rn:'<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6M8 14v6M12 16v6"/>',sn:'<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M8 15h.01M8 19h.01M12 17h.01M12 21h.01M16 15h.01M16 19h.01"/>',th:'<path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/><path d="m13 12-3 5h4l-3 5"/>'};
@@ -1963,29 +1928,26 @@ function metDaily(j){const g={};j.properties.timeseries.forEach(t=>{const d=new 
  return {daily:{time:ks,temperature_2m_max:ks.map(k=>g[k].mx),temperature_2m_min:ks.map(k=>g[k].mn),precip_mm:ks.map(k=>g[k].mm),weather_code:ks.map(k=>{const c=g[k].c.sort((a,b)=>a-b);return c[Math.floor(c.length*.6)]})}}}
 function dayWx(i,d){if(!WX)return '';const f=fmtD(WX.b[i],iso(d));if(!f)return '';return `<div class="sdw">${svgI('thr')}<span><b>${f.mx}° / ${f.mn}°</b> ${f.c}${f.p!=null?` · осадки ${f.p}`:''}</span></div>`}
 function srcLinks(){return `<div class="src"><b>Официальный прогноз</b><a href="https://belgidromet.by/" target="_blank" rel="noopener">Белгидромет</a><small>${WX?`Прогноз в карточках: ${WX.src||'Open-Meteo'}, обновлено ${new Date(WX.t).toLocaleString('ru',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}`:'Живой прогноз появится примерно за 10 дней до даты — пока показана климатическая норма'}</small></div>`}
-function paintWx(){if(!WX)return;B.forEach((b,i)=>{const ks=b.days.map(iso);const k=TODAY&&b.days.includes(TODAY)?iso(TODAY):ks[0];const f=fmtD(WX.b[i],k);if(!f)return;
- const all=ks.map(x=>fmtD(WX.b[i],x)).filter(Boolean);const mx=Math.max(...all.map(x=>x.mx)),mn=Math.min(...all.map(x=>x.mn));
- const wel=$('#wx'+i);if(wel)wel.innerHTML=(TODAY&&k===iso(TODAY))?`<b>сегодня ${f.mx}° / ${f.mn}°</b><small>${f.c}</small>`:`<b>${mn===mx?mx:`${mn}…${mx}`}°</b><small>${f.c}</small>`;});
- if(DAY)cards.innerHTML=dayCard(DAY);if(sheet.classList.contains('on'))renderTab();}
+function paintWx(){DKEYS.forEach(k=>{const el=$('#wx-'+k.split('.')[0]);if(el)el.innerHTML=wxCell(k)});if(sheet.classList.contains('on'))renderTab();}
 async function loadWx(){
  try{const c=JSON.parse(localStorage.getItem('blr_wx')||'null');if(c){WX=c;paintWx();if(Date.now()-c.t<3*36e5)return;}}catch(e){}
  const met=async()=>{const one=ll=>fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${ll[0].toFixed(3)}&lon=${ll[1].toFixed(3)}`).then(r=>{if(!r.ok)throw 0;return r.json()}).then(metDaily);return {b:await Promise.all(B.map(x=>one(x.ll))),src:'MET Norway (yr.no)'}};
  const om=async()=>{const ac=new AbortController();const to=setTimeout(()=>ac.abort(),6000);const rb=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${B.map(b=>b.ll[0]).join(',')}&longitude=${B.map(b=>b.ll[1]).join(',')}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe%2FMinsk&forecast_days=16`,{signal:ac.signal}).then(r=>r.json());clearTimeout(to);if(!Array.isArray(rb))throw 0;return {b:rb,src:'Open-Meteo'}};
- try{let r;try{r=await met()}catch(e){r=await om()}WXERR=false;WX={t:Date.now(),...r};localStorage.setItem('blr_wx',JSON.stringify(WX));paintWx();}catch(e){WXERR=true;if(DAY)cards.innerHTML=dayCard(DAY);paintWx();}}
+ try{let r;try{r=await met()}catch(e){r=await om()}WXERR=false;WX={t:Date.now(),...r};localStorage.setItem('blr_wx',JSON.stringify(WX));paintWx();}catch(e){WXERR=true;paintWx();}}
 addEventListener('online',()=>{WXERR=false;loadWx()});
 function wSwipe(el,fn){let acc=0,lock=0,tm;el.addEventListener('wheel',e=>{if(e.ctrlKey||Math.abs(e.deltaX)<=Math.abs(e.deltaY))return;e.preventDefault();if(Date.now()<lock)return;acc+=e.deltaX;clearTimeout(tm);tm=setTimeout(()=>acc=0,200);if(Math.abs(acc)>70){const d=acc>0?1:-1;acc=0;lock=Date.now()+700;fn(d)}},{passive:false})}
-wSwipe(cards,d=>{if(DAY){if(stepSeq(d))cards.firstElementChild.animate([{transform:`translateX(${d>0?40:-40}px)`,opacity:.4},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.8,.2,1)'})}else if(LEGM!=null){if(LEGS[LEGM+d])openLeg(LEGM+d)}else if(!WIDE()){goCard(Math.max(0,Math.min(B.length,cur+d)))}});
-wSwipe($('#sbody'),d=>{if(SC.leg!=null)return;const T=SC.day?TABS.slice(0,2):TABS,k=T.indexOf(stab)+d;if(k<0||k>=T.length)return;stab=T[k];renderTab();$('#sbody').animate([{transform:`translateX(${d>0?40:-40}px)`,opacity:.3},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.8,.2,1)'})});
-if(window.ResizeObserver){let lw=null;new ResizeObserver(()=>{const w=$('#top').offsetWidth+'x'+$('#top').offsetHeight;if(w===lw)return;const first=lw===null;lw=w;layout();if(!first){map.invalidateSize();DAY?selectDay(DAY,false):LEGM!=null?openLeg(LEGM,false):focus(cur,false)}}).observe($('#top'))}
+wSwipe(cards,d=>{if(!WIDE())goCard(Math.max(0,Math.min(DKEYS.length,cur+d)))});
+wSwipe($('#sbody'),d=>{if(!SC)return;const T=tabsOf(SC),k=T.indexOf(stab)+d;if(k<0||k>=T.length)return;stab=T[k];renderTab();$('#sbody').animate([{transform:`translateX(${d>0?40:-40}px)`,opacity:.3},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.8,.2,1)'})});
+if(window.ResizeObserver){let lw=null;new ResizeObserver(()=>{const w=$('#top').offsetWidth+'x'+$('#top').offsetHeight;if(w===lw)return;const first=lw===null;lw=w;layout();if(!first){map.invalidateSize();focus(cur,false)}}).observe($('#top'))}
 ['pageshow','visibilitychange'].forEach(ev=>addEventListener(ev,()=>{if(!document.hidden)layout()}));
-addEventListener('load',()=>{layout();map.invalidateSize();if(!DAY&&LEGM==null&&!sheet.classList.contains('on'))focus(cur,false)});
-layout();
-if(TODAY&&DAYPLAN[TODAY]){focus(DAYPLAN[TODAY].b+1,false);selectDay(TODAY,false)}else focus(0,false);
+const START=TODAY&&DAYPLAN[TODAY]?DKEYS.indexOf(TODAY)+1:0;
+addEventListener('load',()=>{layout();map.invalidateSize();if(!sheet.classList.contains('on')){toCard(cards.children[cur]);focus(cur,false)}});
+layout();cur=START;toCard(cards.children[START]);focus(START,false);
 loadWx();
-let G=false;const deep=()=>sheet.classList.contains('on')||pop.classList.contains('on')||DAY||LEGM!=null||cur>0;
+let G=false;const deep=()=>sheet.classList.contains('on')||pop.classList.contains('on')||cur>0;
 function guard(){if(!G&&deep()){history.pushState({g:1},'');G=true}}
 ['click','touchend'].forEach(ev=>document.addEventListener(ev,()=>setTimeout(guard,400),true));
-addEventListener('popstate',()=>{G=false;if(sheet.classList.contains('on'))closeSheet();else if(pop.classList.contains('on'))closePop();else if(DAY)exitDay(DAYPLAN[DAY].b+1);else if(LEGM!=null)exitLeg();else if(cur>0)goCard(0);else return;setTimeout(guard,50);});
+addEventListener('popstate',()=>{G=false;if(sheet.classList.contains('on'))closeSheet();else if(pop.classList.contains('on'))closePop();else if(cur>0)goCard(0);else return;setTimeout(guard,50);});
 
 </script>
 
