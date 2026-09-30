@@ -1510,7 +1510,7 @@ html[data-theme=dark] .cpy{background:rgba(236,122,86,.18)}
 html[data-theme=dark] .bub{background:rgba(236,122,86,.16)}
 .elv .et{justify-content:space-between}
 #strip .dy{--g:var(--route)}
-.leaflet-tile-pane{filter:saturate(.5) brightness(1.04) contrast(.92)}html[data-theme=dark] .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(.82) saturate(.35)}
+.leaflet-tile-pane{filter:saturate(.6) contrast(.95)}html[data-theme=dark] .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(.82) saturate(.35)}
 </style>
 </head>
 <body>
@@ -1731,14 +1731,14 @@ function DRAW(ps){ps=ps.filter(p=>p&&p._path);if(RM()||!ps.length)return;ps.forE
   E.forEach(e=>{const n=e.getTotalLength();e.style.transition='none';e.style.strokeDasharray=n;e.style.strokeDashoffset=n;e.style.opacity='';e.getBoundingClientRect();e.style.transition=`stroke-dashoffset ${D}ms cubic-bezier(.3,0,0,1)`;e.style.strokeDashoffset=0;setTimeout(()=>{e.style.strokeDasharray='';e.style.strokeDashoffset='';e.style.transition=''},D+60)})};
  setTimeout(()=>{map.once('moveend',go);setTimeout(go,1500)},30);}
 // ─── КАРТА
-const map=L.map('map',{zoomControl:false,zoomSnap:.25,wheelPxPerZoomLevel:90}).setView([53.2,25.5],7);
+const map=L.map('map',{crs:L.CRS.EPSG3395,zoomControl:false,zoomSnap:.25,wheelPxPerZoomLevel:90}).setView([53.2,25.5],7);
 (()=>{const BM=window.BASEMAP;if(!BM)return;map.createPane('base');map.getPane('base').style.zIndex=150;const rd=L.canvas({pane:'base',padding:.5}),o={pane:'base',renderer:rd,interactive:false};
  const Ld=BM.land.map(p=>L.polygon(p,{...o,weight:1,fillOpacity:1}).addTo(map)),Lk=BM.lakes.map(p=>L.polygon(p,{...o,stroke:false,fillOpacity:1}).addTo(map)),Rv=BM.rivers.map(([l,r])=>L.polyline(l,{...o,weight:r<=5?2:1.3}).addTo(map));
  window.paintBase=()=>{const d=DARK();map.getContainer().style.background=d?'#1b2024':'#dde2e5';Ld.forEach(p=>p.setStyle({color:d?'#3d3835':'#c9c5c4',fillColor:d?'#262220':'#f3f2f2'}));Lk.forEach(p=>p.setStyle({fillColor:d?'#1b2024':'#dde2e5'}));Rv.forEach(p=>p.setStyle({color:d?'#2a3439':'#c3ccd2'}))};paintBase();
  map.attributionControl.addAttribution('Natural Earth');})();
-(()=>{const U='https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
- L.tileLayer(U,{attribution:'Tiles © Esri',crossOrigin:'anonymous',maxZoom:19,maxNativeZoom:19,keepBuffer:4,updateWhenZooming:false,errorTileUrl:'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='}).addTo(map);
- window.setTiles=()=>{};window.curTile=()=>({url:U,st:'esri'});})();
+(()=>{const U='https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&scale={sc}&lang=ru_RU';
+ L.tileLayer(U,{sc:devicePixelRatio>1?2:1,attribution:'© Яндекс',crossOrigin:'anonymous',maxZoom:19,keepBuffer:4,updateWhenZooming:false,errorTileUrl:'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='}).addTo(map);
+ window.setTiles=()=>{};window.curTile=()=>({url:U.replace('{sc}',devicePixelRatio>1?2:1),st:'ya'});})();
 const lyrRoute=L.layerGroup().addTo(map),lyrSights=L.layerGroup().addTo(map),lyrBases=L.layerGroup().addTo(map);
 function eqH(){const c=$('#cards');if(!c)return;c.style.removeProperty('--eqH');if(WIDE()||DAY||LEGM!=null)return;const ks=[...c.children];if(ks.length<2)return;c.style.setProperty('--eqH',Math.max(...ks.map(x=>x.offsetHeight))+'px')}
 function curCardH(){const c=$('#cards');try{const el=(DAY||LEGM!=null)?c.firstElementChild:(c.querySelector('.card2.cur')||c.firstElementChild);if(!el)return c.offsetHeight;const cs=getComputedStyle(c);return el.offsetHeight+parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom)}catch(e){return c.offsetHeight}}
@@ -2051,7 +2051,7 @@ let LIST=null,RUN=false,done=0,bytes=0,fail=0;
 const mb=b=>b>=1048576?(b/1048576).toFixed(b>=1e8?0:1).replace('.',',')+' МБ':Math.max(1,Math.round(b/1024))+' КБ';
 const plF=n=>n%10==1&&n%100!=11?'фрагмент':n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?'фрагмента':'фрагментов';
 function tileList(){if(LIST)return LIST;const S=new Set(),add=(z,x,y)=>S.add(z+'/'+x+'/'+y);
-  const tx=(lo,z)=>Math.floor((lo+180)/360*2**z),ty=(la,z)=>{const s=Math.sin(la*Math.PI/180);return Math.floor((.5-Math.log((1+s)/(1-s))/(4*Math.PI))*2**z)};
+  const tx=(lo,z)=>Math.floor((lo+180)/360*2**z),ty=(la,z)=>{const f=la*Math.PI/180,e=0.0818191908426,s=e*Math.sin(f),yy=Math.log(Math.tan(Math.PI/4+f/2)*Math.pow((1-s)/(1+s),e/2));return Math.floor((.5-yy/(2*Math.PI))*2**z)};
   const box=(la,lo,km,z)=>{const dl=km/111,dn=km/(111*Math.cos(la*Math.PI/180));for(let x=tx(lo-dn,z);x<=tx(lo+dn,z);x++)for(let y=ty(la+dl,z);y<=ty(la-dl,z);y++)add(z,x,y)};
   const lines=[...B.map(b=>b.route),...Object.values(window.DAYR||{}).map(r=>r&&r.c)].filter(l=>l&&l.length);
   let a0=90,a1=-90,o0=180,o1=-180;lines.forEach(l=>l.forEach(p=>{if(p[0]<a0)a0=p[0];if(p[0]>a1)a1=p[0];if(p[1]<o0)o0=p[1];if(p[1]>o1)o1=p[1]}));a0-=.1;a1+=.1;o0-=.1;o1+=.1;
