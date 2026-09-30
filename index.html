@@ -1749,7 +1749,7 @@ function layout(){eqH();const w=WIDE(),oh=$('#top').offsetHeight;SW=w?(parseFloa
 const dir={l:'left',r:'right',t:'top',b:'bottom'};
 let BT=[];
 function baseMk(i,on,lyr){const b=B[i],hh=on?32:26,w=hh,d0=b.days[0];
- const m=L.marker(b.ll,{icon:L.divIcon({className:'',html:`<div class="bm${on?' on':''}" style="width:${w}px;height:${hh}px">${d0.split('.')[0]}</div>`,iconSize:[w,hh],iconAnchor:[w/2,hh/2]}),zIndexOffset:on?2000:1000}).addTo(lyr);
+ const m=L.marker(b.ll,{icon:L.divIcon({className:'',html:`<div class="bm${on?' on':''}" style="width:${w}px;height:${hh}px">${i+1}</div>`,iconSize:[w,hh],iconAnchor:[w/2,hh/2]}),zIndexOffset:on?2000:1000}).addTo(lyr);
  const d=dir[b.lab]||'right';m.bindTooltip(`${d0} ${b.n}`,{permanent:true,direction:d,offset:d==='left'?[-w/2-2,0]:[w/2+2,0],className:'lb lbase'+(on?' on':'')});BT.push({m,d,w,hh});
  m.on('click',e=>{L.DomEvent.stop(e);goCard(DKEYS.indexOf(d0)+1)});return m}
 function mskMk(lyr){const m=L.marker(MSK,{icon:L.divIcon({className:'',html:`<div class="sm">${svgI('trn','')}</div>`,iconSize:[28,28],iconAnchor:[14,14]}),zIndexOffset:1500}).addTo(lyr);m.bindTooltip('Минск',{permanent:true,direction:'top',offset:[0,-14],className:'lb lbase'});BT.push({m,d:'top',w:28,hh:28});m.on('click',e=>{L.DomEvent.stop(e);goCard(0)});return m}
@@ -1779,6 +1779,9 @@ function declutter(){const hit=(r,p)=>!(r.right<p.left||r.left>p.right||r.bottom
 map.on('zoomend moveend',declutter);
 // ─── ДЕНЬ
 function stopsOf(k){return DAYPLAN[k].s.map(t=>{const walk=t[0]==='~',n=walk?t.slice(1):t;if(n==='@M')return {ll:MSK,msk:1,n:'Минск'};if(n[0]==='@'){const bi=+n.slice(1);return {ll:B[bi].ll,base:bi,n:B[bi].n}}const p=PN[n];return p?{ll:p.ll,p,n,walk}:null}).filter(Boolean)}
+function goN(k){const st=stopsOf(k),nb=NIGHT(k);let lb=-1;st.forEach((s,i)=>{if(i>0&&s.base!=null&&s.base===nb)lb=i});
+ const up=lb<0?st.length:lb,pts=[];for(let i=1;i<up;i++){const s=st[i];if(s.p&&!s.walk&&s.p.ic!=='car')pts.push(s.ll)}
+ const to=nb==null?MSK:B[nb].ll;return 'yandexnavi://build_route_on_map?lat_to='+to[0]+'&lon_to='+to[1]+pts.map((p,i)=>`&lat_via_${i}=${p[0]}&lon_via_${i}=${p[1]}`).join('')}
 function goU(k){const st=stopsOf(k),nb=NIGHT(k);let lb=-1;st.forEach((s,i)=>{if(i>0&&s.base!=null&&s.base===nb)lb=i});
  const up=lb<0?st.length:lb,pts=[];for(let i=1;i<up;i++){const s=st[i];if(s.p&&!s.walk&&s.p.ic!=='car')pts.push(s.ll)}
  return YR([...pts,nb==null?MSK:B[nb].ll])}
@@ -1802,8 +1805,8 @@ const nightTx=k=>k==='8.11'?'поезд 008 в 21:35':'ночь: '+B[NIGHT(k)].n
 function dayCard(k){const r=DAYR[k],dd=k.split('.')[0],cnt=new Set(stopsOf(k).filter(s=>s.p).map(s=>s.n)).size,ix=DKEYS.indexOf(k),last=ix===DKEYS.length-1,nb=NIGHT(k);
  return `<article class="card2" data-k="${k}"><div class="chd" style="grid-template-columns:auto 1fr"><div class="num">${dd}</div><div><div class="nm one">${DT[k]}</div><div class="sub one">${WD[k]}, ${dd} <i class="mf">ноября</i><i class="ms">ноя</i> · ${nightTx(k)}</div></div></div>
 <div class="row dr2"><div>${svgI('car')}<span><b class="v">${r.km} км</b><small>${DRV[k]} за рулём</small></span></div><div id="wx-${dd}">${wxCell(k)}</div></div>
-<div class="acts"><button class="btn btn-primary" data-dsh="${k}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-dsh="${k}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button>${nb!=null?`<button class="btn btn-secondary btn-icon" data-dsh="${k}" data-t="home" aria-label="Жильё">${svgI('bed')}</button>`:''}${ix>0?`<button class="btn btn-secondary btn-icon" data-go="${ix}" aria-label="Предыдущий день">${svgI('cl')}</button>`:''}${last?'':`<button class="btn btn-secondary btn-icon" data-go="${ix+2}" aria-label="Следующий день">${svgI('cr')}</button>`}</div>
-<a class="lgb" href="${goU(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'вокзал Минск-Пассажирский':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
+<div class="acts"><button class="btn btn-primary" data-dsh="${k}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-dsh="${k}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button>${nb!=null?`<button class="btn btn-secondary btn-icon" data-dsh="${k}" data-t="home" aria-label="Жильё">${svgI('bed')}</button>`:''}</div>
+<a class="lgb" href="${goU(k)}" data-navi="${goN(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'вокзал Минск-Пассажирский':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
 function markStrip(){document.querySelectorAll('.dy').forEach(e=>e.classList.toggle('sel',e.dataset.d===DAY));document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',cur===0||+e.dataset.i===cur))}
 function fly(bb,mz,anim){layout();const o={paddingTopLeft:[(SW?28:44)+SW,topH+30],paddingBottomRight:[28,cardsH+20],maxZoom:mz};map.stop();
  if(!anim||RM())return map.fitBounds(bb,{...o,animate:false});const c=map.getBounds(),far=!c.pad(.5).intersects(bb);map.flyToBounds(bb,{...o,duration:far?1.4:1,easeLinearity:.2});}
@@ -1823,8 +1826,8 @@ function applyTheme(){const d=DARK();GREY=d?'#6f6966':'#9b9797';GREY4=d?'#4f4a47
 applyTheme();addEventListener('themechange',()=>{applyTheme();render()});
 $('#themeBtn').onclick=()=>__thm.set(DARK()?'light':'dark');
 // ─── КАРТОЧКИ
-let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней</div><div class="wxl">${svgI('car')}<span><b>≈1170 км</b><small>4 ночёвки · старт и финиш в Минске</small></span></div></div><div class="nts"><strong>4</strong>ночи</div></div>
-<div class="flt"><div><b>Прибытие <small>· ср 4.11</small></b><small>Минск-Пассажирский 06:40</small></div><div><b>Поезд 008 <small>· вс 8.11</small></b><small>Минск 21:35 → Москва 06:56</small></div></div>
+let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней</div><div class="wxl">${svgI('car')}<span><b>≈1170 км</b></span></div></div><div class="nts"><strong>4</strong>ночи</div></div>
+<div class="flt"><div><b>Старт</b><small>ср 4.11 · 06:40</small></div><div><b>Финиш</b><small>вс 8.11 · 21:35</small></div></div>
 <button class="offl" id="offb">${svgI('dl')}<span>Сохранить карту для офлайна</span><em></em></button>
 <button class="lgb" data-go="1">${svgI('car')}<span>В Берёзу</span><em>4.11 · ${DRV['4.11']} · ${DAYR['4.11'].km} км</em>${svgI('cr')}</button></article>`;
 ch+=DKEYS.map(dayCard).join('');
@@ -1836,6 +1839,7 @@ function goCard(i){closeSheet();toCard(cards.children[i],1);if(i!==cur)focus(i,t
 let stt;cards.addEventListener('scroll',()=>{if(WIDE())return;clearTimeout(stt);stt=setTimeout(()=>{
  const mid=cards.scrollLeft+cards.clientWidth/2;let best=0,bd=1e9;[...cards.children].forEach((c,j)=>{const d=Math.abs(c.offsetLeft+c.offsetWidth/2-mid);if(d<bd){bd=d;best=j}});if(best!==cur)focus(best,true);},90)});
 cards.onclick=e=>{if(e.target.closest('#offb')){window.offToggle&&offToggle();return}
+ const nv=e.target.closest('[data-navi]');if(nv&&matchMedia('(pointer:coarse)').matches){e.preventDefault();const fb=nv.href;let gone=false;const h=()=>{if(document.hidden)gone=true};document.addEventListener('visibilitychange',h);location.href=nv.dataset.navi;setTimeout(()=>{document.removeEventListener('visibilitychange',h);if(!gone&&!document.hidden)location.href=fb},1600);return}
  if(e.target.closest('a'))return;
  const g=e.target.closest('[data-go]');if(g){goCard(+g.dataset.go);return}
  const ds=e.target.closest('[data-dsh]');if(ds){const i=DKEYS.indexOf(ds.dataset.dsh)+1;if(i!==cur){toCard(cards.children[i],1);focus(i,true)}openSheet(ds.dataset.dsh,ds.dataset.t);return}
