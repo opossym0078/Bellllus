@@ -1471,7 +1471,7 @@ html[data-theme=dark] .num.numc{background:color-mix(in srgb,var(--cc) 22%,trans
 a.lgb{text-decoration:none;box-sizing:border-box}a.lgb,a.lgb:hover,a.lgb:active,a.lgb:visited{color:#fff}
 .offl.done{color:var(--color-neutral-600)}.offl.done em{color:var(--color-neutral-500)}.offl.done .ic{color:var(--color-neutral-500)}
 .offl{margin-top:-2px}
-@media (max-width:759px){#cards>.card2{min-height:var(--eqH,0px)}.card2.ov{justify-content:space-between}}
+@media (max-width:759px){#cards>.card2{min-height:var(--eqH,0px)}.card2.ov{justify-content:flex-start}}
 .leaflet-marker-icon .bm{background:var(--cc,var(--route));box-shadow:0 3px 10px color-mix(in srgb,var(--cc,var(--route)) 40%,transparent)}
 .leaflet-marker-icon .bm.on{background:color-mix(in srgb,var(--cc,var(--route)) 80%,#000)}
 .leaflet-marker-icon .sm{background:color-mix(in srgb,var(--cc,var(--route)) 14%,#fff);color:color-mix(in srgb,var(--cc,var(--route)) 72%,#000);box-shadow:inset 0 0 0 2px var(--cc,var(--route)),0 2px 6px rgba(46,32,26,.2)}
@@ -1807,7 +1807,7 @@ function dayCard(k){const r=DAYR[k],dd=k.split('.')[0],cnt=new Set(stopsOf(k).fi
  return `<article class="card2" data-k="${k}"><div class="chd" style="grid-template-columns:auto 1fr"><div class="num">${ix+1}</div><div><div class="nm one">${DT[k]}</div><div class="sub one">${WD[k]}, ${dd} <i class="mf">ноября</i><i class="ms">ноя</i> · ${nightTx(k)}</div></div></div>
 <div class="row dr2"><div>${svgI('car')}<span><b class="v">${r.km} км</b><small>${DRV[k]} за рулём</small></span></div><div id="wx-${dd}">${wxCell(k)}</div></div>
 <div class="acts"><button class="btn btn-primary" data-dsh="${k}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-dsh="${k}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button>${nb!=null?`<button class="btn btn-secondary btn-icon" data-dsh="${k}" data-t="home" aria-label="Жильё">${svgI('bed')}</button>`:''}</div>
-<a class="lgb" href="${goU(k)}" data-navi="${goN(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'офис проката, ТЦ «Титан»':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
+<a class="lgb" href="${goU(k)}" data-navi="${goN(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'офис проката':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
 function markStrip(){document.querySelectorAll('.dy').forEach(e=>e.classList.toggle('sel',e.dataset.d===DAY));document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',cur===0||+e.dataset.i===cur))}
 function fly(bb,mz,anim){layout();const o={paddingTopLeft:[(SW?28:44)+SW,topH+30],paddingBottomRight:[28,cardsH+20],maxZoom:mz};map.stop();
  if(!anim||RM())return map.fitBounds(bb,{...o,animate:false});const c=map.getBounds(),far=!c.pad(.5).intersects(bb);map.flyToBounds(bb,{...o,duration:far?1.4:1,easeLinearity:.2});}
@@ -1827,10 +1827,10 @@ function applyTheme(){const d=DARK();GREY=d?'#6f6966':'#9b9797';GREY4=d?'#4f4a47
 applyTheme();addEventListener('themechange',()=>{applyTheme();render()});
 $('#themeBtn').onclick=()=>__thm.set(DARK()?'light':'dark');
 // ─── КАРТОЧКИ
-let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней · ≈1170 км</div></div><div class="nts"><strong>4</strong>ночи</div></div>
+let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('car','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · 5 дней · ≈1170 км</div></div><div class="nts"><strong>4</strong>ночи</div></div>
 <div class="row dr2"><div>${svgI('trn')}<span><b class="v">06:40</b><small>старт · ср 4.11</small></span></div><div>${svgI('trn')}<span><b class="v">21:35</b><small>финиш · вс 8.11</small></span></div></div>
 <button class="offl" id="offb">${svgI('dl')}<span>Сохранить карту для офлайна</span><em></em></button>
-<button class="lgb" data-go="1">${svgI('car')}<span>В Берёзу</span><em>4.11 · ${DRV['4.11']} · ${DAYR['4.11'].km} км</em>${svgI('cr')}</button></article>`;
+<button class="lgb" data-go="1">${svgI('car')}<span>Начать</span>${svgI('cr')}</button></article>`;
 ch+=DKEYS.map(dayCard).join('');
 $('#cards').innerHTML=ch;
 const cards=$('#cards');
