@@ -1575,16 +1575,16 @@ const SUT='Суточно.ру';
 // ─── БАЗЫ
 const B=[
 {n:'Берёза',c:'Брестская обл.',ll:[52.52272,24.96759],dt:'4–5 ноя',ni:1,w:'+5° / 0°',wn:'пасмурно, бывает мокрый снег',lab:'r',
- h:{n:'Квартира в Берёзе',u:'https://sutochno.ru/front/searchapp/detail/2311177?id=1&guests_adults=2&occupied=2026-11-04%3B2026-11-05',w:'ул. Павла Горина-Коляды, 24',ex:1,ci:'≈ 19:45',co:'уточнить',p:'уточнить у хозяина',pr:'≈100 BYN (2 788 ₽)'},
+ h:{n:'Квартира в Берёзе',u:'https://sutochno.ru/front/searchapp/detail/2311177?id=1&guests_adults=2&occupied=2026-11-04%3B2026-11-05',w:'ул. Павла Горина-Коляды, 24',ex:1,ci:'19:45',co:'08:50',p:'уточнить у хозяина',pr:'≈100 BYN (2 788 ₽)'},
  days:['4.11']},
 {n:'Брест',c:'Брестская обл.',ll:[52.09121,23.69755],dt:'5–6 ноя',ni:1,w:'+6° / +1°',wn:'пасмурно, возможен дождь',lab:'r',
- h:{n:'Квартира в Бресте',u:'https://sutochno.ru/front/searchapp/detail/2277453?occupied=2026-11-05%3B2026-11-06&guests_adults=2&id=1',w:'ул. Будённого, 40',ex:1,ci:'15:00',co:'до 8:00 — уточнить',p:'уточнить у хозяина',pr:'≈119 BYN — уточнить'},
+ h:{n:'Квартира в Бресте',u:'https://sutochno.ru/front/searchapp/detail/2277453?occupied=2026-11-05%3B2026-11-06&guests_adults=2&id=1',w:'ул. Будённого, 40',ex:1,ci:'15:00',co:'07:30',p:'уточнить у хозяина',pr:'≈119 BYN — уточнить'},
  days:['5.11']},
 {n:'Гродно',c:'Гродненская обл.',ll:[53.67854,23.83471],dt:'6–7 ноя',ni:1,w:'+5° / 0°',wn:'пасмурно, бывает мокрый снег',lab:'l',
- h:{n:'Квартира в центре',u:'https://sutochno.ru/front/searchapp/detail/2388313?guests_adults=2&occupied=2026-11-06%3B2026-11-07',w:'ул. Социалистическая, 40',ci:'≈ 21:45 — договориться',co:'уточнить',p:'уточнить у хозяина',pr:'≈115 BYN (3 205 ₽)',ex:1},
+ h:{n:'Квартира в центре',u:'https://sutochno.ru/front/searchapp/detail/2388313?guests_adults=2&occupied=2026-11-06%3B2026-11-07',w:'ул. Социалистическая, 40',ci:'21:45',co:'14:30',p:'уточнить у хозяина',pr:'≈115 BYN (3 205 ₽)',ex:1},
  days:['6.11']},
 {n:'Лида',c:'Гродненская обл.',ll:[53.89222,25.30216],dt:'7–8 ноя',ni:1,w:'+4° / −1°',wn:'пасмурно, возможны заморозки',lab:'r',
- h:{n:'Квартира в Лиде',u:'https://sutochno.ru/front/searchapp/detail/1533242?id=1&guests_adults=2&occupied=2026-11-07%3B2026-11-08',w:'ул. Советская, 11',ex:1,ci:'≈ 18:30',co:'до 8:30 — уточнить',p:'уточнить у хозяина',pr:'≈120 BYN (3 346 ₽)'},
+ h:{n:'Квартира в Лиде',u:'https://sutochno.ru/front/searchapp/detail/1533242?id=1&guests_adults=2&occupied=2026-11-07%3B2026-11-08',w:'ул. Советская, 11',ex:1,ci:'18:30',co:'08:30',p:'уточнить у хозяина',pr:'≈120 BYN (3 346 ₽)'},
  days:['7.11']}];
 // ─── ПЕРЕГОНЫ (j = база прибытия; 4 = финиш в Минске)
 const LEGS=[
@@ -1629,8 +1629,8 @@ const P0=[
 ['Лидский замок',53.88716,25.30348,'cas','8.11','пешком от базы','XIV век, 10:00–19:00, 15 BYN',3,'pl'],
 ['Костёл Воздвижения Святого Креста',53.8893,25.2997,'chu','8.11','пешком от замка','барокко XVIII века',3,'pl'],
 ['Озеро Свитязь',53.4400,25.9140,'wav','8.11','1 ч · 75 км от Лиды','озеро из баллад Мицкевича',4,'en'],
-['Вокзал: сдача машины',53.8900,27.5530,'car','8.11','2 ч · 150 км от Свитязи','полный бак, возврат ≈16:00',4,'en'],
-['Красный костёл',53.8963,27.5475,'chu','8.11','пешком · 15 мин от вокзала','костёл Симеона и Елены',4,'en'],
+['Офис проката: сдача машины',53.86044,27.48183,'car','8.11','2 ч · 150 км от Свитязи','ТЦ «Титан», пр. Дзержинского, 104',4,'en'],
+['Красный костёл',53.8963,27.5475,'chu','8.11','пешком от вокзала','костёл Симеона и Елены',4,'en'],
 ['Верхний город',53.90356,27.55613,'lmk','8.11','пешком','площадь Свободы и ратуша',4,'en'],
 ['Троицкое предместье',53.90833,27.55657,'lmk','8.11','пешком','старый квартал на Свислочи',4,'en'],
 ['Остров слёз',53.90964,27.55451,'lmk','8.11','пешком','мемориал на острове',4,'en'],
@@ -1672,7 +1672,7 @@ const DESC={
 'Лидский замок':['Кирпичный замок XIV века времён Гедимина. Экспозиции в башнях пускают партиями — приходите к открытию.',''],
 'Костёл Воздвижения Святого Креста':['Барочный костёл XVIII века в центре Лиды, в нескольких минутах от замка.',''],
 'Озеро Свитязь':['Лесное озеро у Новогрудка с очень чистой водой, вокруг — тропа. У воды ветрено.','Озеро воспел Адам Мицкевич в балладах «Свитязь» и «Свитезянка».'],
-'Вокзал: сдача машины':['Возврат машины Alfarent у вокзала с полным баком, затем вещи — в камеру хранения.',''],
+'Офис проката: сдача машины':['Возврат машины Alfarent с полным баком: ТЦ «Титан», пр. Дзержинского, 104, у метро Петровщина. До вокзала — на метро.',''],
 'Красный костёл':['Костёл Симеона и Елены 1910 года из красного кирпича на площади Независимости.','Построен на средства Эдварда Войниловича в память о его умерших детях.'],
 'Верхний город':['Исторический центр на площади Свободы: ратуша, Свято-Духов собор, костёлы.',''],
 'Троицкое предместье':['Восстановленный квартал XIX века на берегу Свислочи — кафе и прогулка.',''],
@@ -1686,13 +1686,13 @@ const DAYPLAN={
 '5.11':{b:1,s:['@0','Картезианский монастырь','~Красные казармы','Дворец Пусловских','~Усадьба Костюшко','~Ресторан «Граф Пусловский»','@1','Музей обороны Брестской крепости','~Музей «Берестье»','~Мемориал «Мужество»','~Холмские ворота','~Тереспольские ворота','~Руины Белого дворца','~Аллея фонарей']},
 '6.11':{b:2,s:['@1','Каменецкая вежа','Кассы в Каменюках','~Экотропа «Озёрное кольцо»','~Музей природы','~Вольеры с зубрами','~Экотропа «Докудово»','@2']},
 '7.11':{b:3,s:['@2','~Старый замок','~Новый замок','~Коложская церковь','~Фарный костёл Святого Франциска Ксаверия','~Советская площадь','Меловые карьеры','@3']},
-'8.11':{b:3,s:['@3','~Лидский замок','~Костёл Воздвижения Святого Креста','Озеро Свитязь','Вокзал: сдача машины','~Красный костёл','~Верхний город','~Троицкое предместье','~Остров слёз','~Национальная библиотека']}};
+'8.11':{b:3,s:['@3','~Лидский замок','~Костёл Воздвижения Святого Креста','Озеро Свитязь','Офис проката: сдача машины','~Красный костёл','~Верхний город','~Троицкое предместье','~Остров слёз','~Национальная библиотека']}};
 const DAYS={
 '4.11':{r:[['06:40','Прибытие на Минск-Пассажирский, завтрак у вокзала'],['08:00','Alfarent подаёт машину к вокзалу, оформление 15–30 минут'],['08:20','Минск → Мир · 1 ч 30 мин · 100 км',1],['09:50','До открытия в 10:00 — двор, пруд и парк, вход свободный'],['10:00','Мирский замок: экспозиция, башни и подвал'],['12:00','Мирская площадь, Костёл Святого Николая'],['12:30','Обед при замке'],['13:30','Мир → Несвиж · 30 мин · 35 км',1],['14:00','Несвижский замок, дворец Радзивиллов'],['15:30','Парки, Фарный костёл Божьего Тела, ратуша по желанию, Слуцкая брама — до заката'],['17:30','Несвиж → Берёза по М1 · 2 ч · 170 км, в темноте',1],['19:45','Заселение, ужин']],
  pre:[],
- cp:[['Напишите в Alfarent:','Здравствуйте! У нас бронь Volkswagen up! на 4–8 ноября. Подтвердите, пожалуйста: подача к вокзалу Минск-Пассажирский 4.11 в 8:00, возврат там же 8.11 около 16:00. Лимит 250 км в сутки считается за весь срок? И можно ли зимнюю или всесезонную резину? Спасибо!']],
- am:['Снять 200–300 BYN наличными — в банкомате на вокзале Минск-Пассажирский, картой «Мир».','Скачайте офлайн-карты в Яндекс Навигаторе: под Коссово и в пуще связь слабая.','Осмотр машины: снимите кузов и салон на видео, проверьте бак, запаску, техпаспорт, полис и договор. Сохраните номер круглосуточной поддержки.'],
- n:'Днём — ближний свет или ДХО. 60 км/ч в городах, 90 вне, до 120 на магистралях, камер много. Водителю — ни капли. Мир: в башнях крутые ступени, аудиогид 6 BYN по документу. Несвиж: если опаздываете — сокращайте парк, а не дворец. Перед М1 в баке не меньше четверти.'},
+ cp:[['Напишите в Alfarent:','Здравствуйте! У нас бронь Volkswagen up! на 4–8 ноября. Подтвердите, пожалуйста: подача к вокзалу Минск-Пассажирский 4.11 в 8:00, возврат 8.11 около 15:30 в офисе в ТЦ «Титан» (пр. Дзержинского, 104). Лимит 250 км в сутки считается за весь срок? И можно ли зимнюю или всесезонную резину? Спасибо!']],
+ am:['Снять 200–300 BYN наличными — в банкомате на вокзале.','Скачайте офлайн-карты: под Коссово и в пуще связь слабая.'],
+ n:'Днём — ближний свет или ДХО. 60 км/ч в городах, 90 вне, до 120 на магистралях, камер много. <br>Несвиж: если опаздываете — сокращайте парк, а не дворец. Перед М1 в баке не меньше четверти.'},
 '5.11':{r:[['07:30','Завтрак'],['08:15','Картезианский монастырь и Красные казармы — снаружи, при утреннем свете'],['08:50','Берёза → Коссово · 40 мин · 35 км',1],['09:30','Дворец Пусловских и Усадьба Костюшко'],['11:45','Обед в ресторане «Граф Пусловский»'],['12:45','Коссово → Брест · 2 ч · 150 км',1],['15:00','Заселение'],['15:15','Музей обороны Брестской крепости'],['16:30','Музей «Берестье» — по желанию'],['17:15','Мемориал «Мужество», Холмские ворота, Тереспольские ворота, Руины Белого дворца — на закате и в подсветке'],['19:00','Аллея фонарей на Советской, ужин']],
  n:'Сначала музей — касса до 17:30, потом территория: вход бесплатный, открыто до 24:00. Коссово: фотосъёмка внутри может быть платной. В центре Бреста платные парковки — SMS или приложение.',
  tm:['Уточните, во сколько 6.11 открывается Каменецкая вежа — от этого зависит утренний заезд.','Заправьтесь вечером: завтра 250 км, из них последние 220 — в темноте.','Непромокаемая обувь и бинокль — на экотропы.']},
@@ -1702,8 +1702,8 @@ const DAYS={
 '7.11':{r:[['08:30','Завтрак'],['10:00','Старый замок и Новый замок'],['12:00','Обед'],['13:00','Коложская церковь, набережная Немана, Фарный костёл Святого Франциска Ксаверия, Советская площадь'],['14:30','Гродно → меловые карьеры · 1 ч · 75 км',1],['15:30','Меловые карьеры: смотровые, бирюзовые озёра. Закат около 17:35'],['16:45','Карьеры → Лида · 1 ч 30 мин · 100 км, в темноте',1],['18:30','Заселение, ужин']],
  n:'Карьеры: вход свободный, смотрите с верхних площадок — склоны крутые и скользкие, особенно после дождя. Точку парковки задайте заранее и приезжайте не позже 15:30.',
  tm:['Лидский замок пускает в башни партиями — будьте у входа к 10:00.']},
-'8.11':{r:[['08:30','Завтрак, выписка'],['09:45','Лидский замок, затем Костёл Воздвижения Святого Креста — пешком'],['11:00','Лида → Свитязь · 1 ч · 75 км',1],['12:00','Озеро Свитязь: берег и лесная тропа'],['13:00','Свитязь → Минск · 2 ч 30 мин · 150 км, обед по пути',1],['15:30','Полный бак и сдача машины у вокзала'],['16:00','Вещи в камеру хранения вокзала'],['16:15','Красный костёл, Верхний город, Троицкое предместье, Остров слёз, ужин. Национальная библиотека — по желанию'],['21:00','Забрать вещи, на вокзал'],['21:35','Поезд 008 → Москва Белорусская, 06:56']],
- n:'У озера ветрено — тёплое наверх. Погранконтроля между Беларусью и Россией нет, на вокзал за 20–30 минут.'}};
+'8.11':{r:[['08:30','Завтрак, выписка'],['09:45','Лидский замок, затем Костёл Воздвижения Святого Креста — пешком'],['11:00','Лида → Свитязь · 1 ч · 75 км',1],['12:00','Озеро Свитязь: берег и лесная тропа'],['13:00','Свитязь → Минск · 2 ч 30 мин · 150 км, обед по пути',1],['15:30','Полный бак и сдача машины в офисе проката — ТЦ «Титан», пр. Дзержинского, 104'],['16:00','Метро Петровщина → вокзал, вещи в камеру хранения'],['16:15','Красный костёл, Верхний город, Троицкое предместье, Остров слёз, ужин. Национальная библиотека — по желанию'],['21:00','Забрать вещи, на вокзал'],['21:35','Поезд 008 → Москва Белорусская, 06:56']],
+ n:'У озера ветрено — тёплое наверх. На вокзал — за 20–30 минут.'}};
 const BK=[['4.11','Alfarent: Volkswagen up! 2019, механика, АИ-95. Подача к вокзалу 8:00, доставка 40 BYN в одну сторону, залог 300 BYN, аренда ≈314 BYN за 5 суток. ⏳ подтвердить подачу, лимит пробега, резину','https://alfarent.by/prokat-auto/volkswagen-up','Alfarent'],
 ['4.11','Берёза, 1 ночь · ≈100 BYN (2 788 ₽) ✅',B[0].h.u,SUT],
 ['5.11','Брест, 1 ночь · ≈119 BYN ⏳ уточнить цену',B[1].h.u,SUT],
@@ -1781,10 +1781,11 @@ map.on('zoomend moveend',declutter);
 function stopsOf(k){return DAYPLAN[k].s.map(t=>{const walk=t[0]==='~',n=walk?t.slice(1):t;if(n==='@M')return {ll:MSK,msk:1,n:'Минск'};if(n[0]==='@'){const bi=+n.slice(1);return {ll:B[bi].ll,base:bi,n:B[bi].n}}const p=PN[n];return p?{ll:p.ll,p,n,walk}:null}).filter(Boolean)}
 function goN(k){const st=stopsOf(k),nb=NIGHT(k);let lb=-1;st.forEach((s,i)=>{if(i>0&&s.base!=null&&s.base===nb)lb=i});
  const up=lb<0?st.length:lb,pts=[];for(let i=1;i<up;i++){const s=st[i];if(s.p&&!s.walk&&s.p.ic!=='car')pts.push(s.ll)}
- const to=nb==null?MSK:B[nb].ll;return 'yandexnavi://build_route_on_map?lat_to='+to[0]+'&lon_to='+to[1]+pts.map((p,i)=>`&lat_via_${i}=${p[0]}&lon_via_${i}=${p[1]}`).join('')}
+ const to=nb==null?RENT:B[nb].ll;return 'yandexnavi://build_route_on_map?lat_to='+to[0]+'&lon_to='+to[1]+pts.map((p,i)=>`&lat_via_${i}=${p[0]}&lon_via_${i}=${p[1]}`).join('')}
 function goU(k){const st=stopsOf(k),nb=NIGHT(k);let lb=-1;st.forEach((s,i)=>{if(i>0&&s.base!=null&&s.base===nb)lb=i});
  const up=lb<0?st.length:lb,pts=[];for(let i=1;i<up;i++){const s=st[i];if(s.p&&!s.walk&&s.p.ic!=='car')pts.push(s.ll)}
- return YR([...pts,nb==null?MSK:B[nb].ll])}
+ return YR([...pts,nb==null?RENT:B[nb].ll])}
+const RENT=[53.86044,27.48183];
 function renderDay(){lyrRoute.clearLayers();lyrSights.clearLayers();lyrBases.clearLayers();BT=[];
  DKEYS.forEach(k=>L.polyline(DAYR[k].c,{color:GREY4,weight:2.5,opacity:.7,interactive:false}).addTo(lyrRoute));
  const st=stopsOf(DAY),r=DAYR[DAY],nb=NIGHT(DAY);
@@ -1803,10 +1804,10 @@ function wxCell(k){const b=B[DAYPLAN[k].b],f=WX&&fmtD(WX.b[DAYPLAN[k].b],iso(k))
  return `${f?WIc(f.w):svgI('thr')}<span>${wx}</span>${wxd}`}
 const nightTx=k=>k==='8.11'?'поезд 008 в 21:35':'ночь: '+B[NIGHT(k)].n;
 function dayCard(k){const r=DAYR[k],dd=k.split('.')[0],cnt=new Set(stopsOf(k).filter(s=>s.p).map(s=>s.n)).size,ix=DKEYS.indexOf(k),last=ix===DKEYS.length-1,nb=NIGHT(k);
- return `<article class="card2" data-k="${k}"><div class="chd" style="grid-template-columns:auto 1fr"><div class="num">${dd}</div><div><div class="nm one">${DT[k]}</div><div class="sub one">${WD[k]}, ${dd} <i class="mf">ноября</i><i class="ms">ноя</i> · ${nightTx(k)}</div></div></div>
+ return `<article class="card2" data-k="${k}"><div class="chd" style="grid-template-columns:auto 1fr"><div class="num">${ix+1}</div><div><div class="nm one">${DT[k]}</div><div class="sub one">${WD[k]}, ${dd} <i class="mf">ноября</i><i class="ms">ноя</i> · ${nightTx(k)}</div></div></div>
 <div class="row dr2"><div>${svgI('car')}<span><b class="v">${r.km} км</b><small>${DRV[k]} за рулём</small></span></div><div id="wx-${dd}">${wxCell(k)}</div></div>
 <div class="acts"><button class="btn btn-primary" data-dsh="${k}" data-t="pl">Места <span>${cnt}</span></button><button class="btn btn-secondary" data-dsh="${k}" data-t="days"><i class="ll">Расписание</i><i class="sl">План</i></button>${nb!=null?`<button class="btn btn-secondary btn-icon" data-dsh="${k}" data-t="home" aria-label="Жильё">${svgI('bed')}</button>`:''}</div>
-<a class="lgb" href="${goU(k)}" data-navi="${goN(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'вокзал Минск-Пассажирский':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
+<a class="lgb" href="${goU(k)}" data-navi="${goN(k)}" target="_blank" rel="noopener">${svgI('car')}<span>В путь</span><em>до: ${nb==null?'офис проката, ТЦ «Титан»':'жильё, '+B[nb].n}</em>${svgI('cr')}</a></article>`}
 function markStrip(){document.querySelectorAll('.dy').forEach(e=>e.classList.toggle('sel',e.dataset.d===DAY));document.querySelectorAll('.sg').forEach(e=>e.classList.toggle('on',cur===0||+e.dataset.i===cur))}
 function fly(bb,mz,anim){layout();const o={paddingTopLeft:[(SW?28:44)+SW,topH+30],paddingBottomRight:[28,cardsH+20],maxZoom:mz};map.stop();
  if(!anim||RM())return map.fitBounds(bb,{...o,animate:false});const c=map.getBounds(),far=!c.pad(.5).intersects(bb);map.flyToBounds(bb,{...o,duration:far?1.4:1,easeLinearity:.2});}
@@ -1826,8 +1827,8 @@ function applyTheme(){const d=DARK();GREY=d?'#6f6966':'#9b9797';GREY4=d?'#4f4a47
 applyTheme();addEventListener('themechange',()=>{applyTheme();render()});
 $('#themeBtn').onclick=()=>__thm.set(DARK()?'light':'dark');
 // ─── КАРТОЧКИ
-let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней</div><div class="wxl">${svgI('car')}<span><b>≈1170 км</b></span></div></div><div class="nts"><strong>4</strong>ночи</div></div>
-<div class="flt"><div><b>Старт</b><small>ср 4.11 · 06:40</small></div><div><b>Финиш</b><small>вс 8.11 · 21:35</small></div></div>
+let ch=`<article class="card2 ov"><div class="chd"><div class="num">${svgI('trn','')}</div><div><div class="nm">Всё путешествие</div><div class="sub">Беларусь · на машине · 5 дней · ≈1170 км</div></div><div class="nts"><strong>4</strong>ночи</div></div>
+<div class="row dr2"><div>${svgI('trn')}<span><b class="v">06:40</b><small>старт · ср 4.11</small></span></div><div>${svgI('trn')}<span><b class="v">21:35</b><small>финиш · вс 8.11</small></span></div></div>
 <button class="offl" id="offb">${svgI('dl')}<span>Сохранить карту для офлайна</span><em></em></button>
 <button class="lgb" data-go="1">${svgI('car')}<span>В Берёзу</span><em>4.11 · ${DRV['4.11']} · ${DAYR['4.11'].km} км</em>${svgI('cr')}</button></article>`;
 ch+=DKEYS.map(dayCard).join('');
@@ -1869,7 +1870,7 @@ const tabsOf=k=>NIGHT(k)==null?['pl','days']:['pl','days','home'];
 function openSheet(k,tab){SC=k;stab=tabsOf(k).includes(tab)?tab:'days';
  $('#tabs').style.display='';$('#tabs [data-t=home]').style.display=NIGHT(k)==null?'none':'';
  const dd=k.split('.')[0];
- $('#shd').innerHTML=`<div class="num">${dd}</div><div><div class="nm">${DT[k]}</div><div class="sub">${WD[k]}, ${dd} ноября · ${nightTx(k)}</div></div><button class="x" id="shx" aria-label="Закрыть">${svgI('x','')}</button>`;$('#shx').onclick=closeSheet;
+ $('#shd').innerHTML=`<div class="num">${DKEYS.indexOf(k)+1}</div><div><div class="nm">${DT[k]}</div><div class="sub">${WD[k]}, ${dd} ноября · ${nightTx(k)}</div></div><button class="x" id="shx" aria-label="Закрыть">${svgI('x','')}</button>`;$('#shx').onclick=closeSheet;
  renderTab();sheet.classList.add('on');sheet.setAttribute('aria-hidden','false');}
 const posIn=p=>{const a=DAYPLAN[p.d].s,i=a.findIndex(t=>t.replace(/^~/,'')===p.n);return DKEYS.indexOf(p.d)*100+(i<0?99:i)};
 function listHtml(ps){ps=[...new Set(ps)].sort((a,b)=>posIn(a)-posIn(b));return ps.map(plRow).join('')}
@@ -1882,7 +1883,7 @@ function chipify(tx){const used=[],hits=[];for(const [v,id] of pidx()){const k=t
 function sRow(r){let tx=r[1],tag='';if(r[2]){const m=tx.match(/\s*·\s*(\d[^·]*(?:ч|мин)[^·]*·\s*[≈~]?\d+\s*км)(.*)$/);if(m){tag=`<em>${m[1].trim()}</em>`;tx=tx.slice(0,m.index)+m[2]}}
  return `<div class="sr${r[2]?' dr':''}"><b>${r[0]}</b><span>${r[2]?`<i class="cr">${svgI('car','')}</i>`:''}${chipify(tx)}${tag}</span></div>`}
 const homeMap=b=>b.h.ex?YM(b.h.w+', '+b.n,b.ll):YP(b.ll);
-function chkIn(b){const o=b.h;return `<div class="chk">${svgI('bed','')}<div><b>${o.n}</b><small>заезд ${o.ci} · парковка: ${o.p}</small></div><a class="btn btn-secondary" href="${homeMap(b)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>`}
+function chkIn(b){const o=b.h;return `<div class="chk">${svgI('bed','')}<div><b>${o.n}</b><small>заезд ${o.ci}</small></div><a class="btn btn-secondary" href="${homeMap(b)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>`}
 function sDay(k){const d=DAYS[k],p=DAYPLAN[k],b=B[p.b],dd=k.split('.')[0],nb=NIGHT(k);
  const sub=(nb==null?'поезд 008 в 21:35':'ночь: '+b.n)+' · закат '+sunset(k,b.ll);
  return `<div class="sd${k===TODAY?' today':''}" data-d="${k}"><div class="sdh"><div class="sdd"><b>${dd}</b><small>${WD[k]}</small></div><div class="sdt"><h4>${DT[k]}</h4><small>${sub}</small></div>${k===TODAY?'<span class="tdy">сегодня</span>':''}</div>
@@ -1890,8 +1891,8 @@ ${d.pre&&(d.pre.length||d.cp)?`<div class="tmr">${svgI('chk','')}<div><b>Пер�
 ${d.am?`<div class="tmr am">${svgI('srise','')}<div><b>С утра</b>${d.am.map(t=>`<span>${t}</span>`).join('')}</div></div>`:''}${dayWx(p.b,k)}${d.r.map(sRow).join('')}${d.n?`<div class="sn"><b>Важно</b><span>${d.n}</span></div>`:''}${d.tm&&d.tm.length?`<div class="tmr">${svgI('moon','')}<div><b>На завтра</b>${d.tm.map(t=>`<span>${t}</span>`).join('')}</div></div>`:''}</div>`}
 const MSG=i=>{const b=B[i],d=b.days[0].split('.')[0];return `Здравствуйте! Мы забронировали у вас жильё на ${d}–${+d+1} ноября, нас двое. Приедем на машине около ${b.h.ci.replace(/[^\d:]/g,'')}. Подскажите, пожалуйста, где можно припарковаться и как забрать ключи? Спасибо!`};
 function homeHtml(i){const b=B[i],o=b.h,d0=b.days[0],co=(+d0.split('.')[0]+1)+'.11';
- return `<div class="sd"><div class="sdh"><div class="sdd">${svgI('bed','')}</div><div class="sdt"><h4>${o.n}</h4><small>ночь ${d0} · ${o.w}</small></div></div>
-${[['ci','Заселение',`<b>${d0}</b> · ${o.ci}`],['co','Выезд',`<b>${co}</b> · ${o.co}`],['car','Парковка',o.p],['rub','Цена',o.pr],['idc','Регистрация','не нужна — гражданам России до 30 дней'],['usr','Хозяину',bub('напишите заранее в чат Суточно.ру:',MSG(i))]].map(r=>`<div class="hrw">${svgI(r[0],'')}<span>${r[1]}</span><div>${r[2]}</div></div>`).join('')}
+ return `<div class="sd"><div class="sdh"><div class="sdd">${svgI('bed','')}</div><div class="sdt"><h4>${o.n}</h4><small>${o.w}</small></div></div>
+${[['ci','Заселение',`<b>${d0}</b> · ${o.ci}`],['co','Выезд',`<b>${co}</b> · ${o.co}`],['usr','Хозяину',bub('напишите заранее в чат Суточно.ру:',MSG(i))]].map(r=>`<div class="hrw">${svgI(r[0],'')}<span>${r[1]}</span><div>${r[2]}</div></div>`).join('')}
 <div class="hl"><a class="btn btn-primary" href="${o.u}" target="_blank" rel="noopener">${svgI('lnk')}Суточно.ру</a><a class="btn btn-secondary" href="${homeMap(b)}" target="_blank" rel="noopener">${svgI('pin')}На карте</a></div>
 ${b.n==='Гродно'?'<div class="sn nt"><b>Заселение</b><span>Приезд около 21:45 — договоритесь с хозяином заранее. Бронируйте сразу: 7.11 праздник.</span></div>':''}</div>`}
 function renderTab(){document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x.dataset.t===stab));const k=SC;let h='';
